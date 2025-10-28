@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 @theme static {
-  --font-sans: 'Open Sans', sans-serif;
+  --font-sans: 'Montserrat', sans-serif;
 }
