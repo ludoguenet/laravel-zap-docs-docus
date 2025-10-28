@@ -94,6 +94,28 @@ Shipped with awesome features
 
   :::u-page-feature
   ---
+  icon: i-lucide-clock-4
+  ---
+  #title
+  Buffer Time Support
+
+  #description
+  Add **configurable gaps** between appointments for setup, cleanup, or transition time.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-calendar-check
+  ---
+  #title
+  Bookable Slots
+
+  #description
+  Get **availability-based slots** that respect your schedule constraints automatically.
+  :::
+
+  :::u-page-feature
+  ---
   icon: i-lucide-target
   ---
   #title

@@ -6,7 +6,7 @@
       <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-300/20 dark:bg-amber-400/5 rounded-full blur-3xl"></div>
     </div>
 
-    <div class="flex flex-col lg:grid py-24 sm:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 gap-16 sm:gap-y-24">
+    <div class="flex flex-col lg:grid py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 gap-12 sm:gap-y-16">
       <div class="text-center max-w-6xl mx-auto">
         <!-- Subtitle badge -->
         <div class="mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20">
@@ -20,7 +20,7 @@
         </div>
 
         <!-- Main headline -->
-        <h1 class="mx-auto max-w-5xl font-display text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-50 sm:text-7xl lg:text-8xl leading-[1.1]">
+        <h1 class="mx-auto max-w-5xl font-display text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-50 sm:text-6xl lg:text-7xl leading-[1.1]">
           <span class="inline-block">
             The
             <span class="relative inline-block whitespace-nowrap text-amber-500 dark:text-amber-400">
@@ -46,13 +46,13 @@
         </h1>
 
         <!-- Description -->
-        <p class="mx-auto mt-8 max-w-3xl text-lg sm:text-xl lg:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+        <p class="mx-auto mt-6 max-w-3xl text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
           A flexible, performant, and developer-friendly calendar management
           system with deep Laravel integration and intuitive APIs.
         </p>
 
         <!-- CTA buttons -->
-        <div class="mt-10 sm:mt-12 flex flex-wrap gap-4 justify-center items-center">
+        <div class="mt-8 sm:mt-10 flex flex-wrap gap-4 justify-center items-center">
           <a
             class="group relative inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl text-white bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/40 focus:ring-2 ring-amber-400 dark:ring-amber-500 focus:outline-none transition-all duration-200 ease-out hover:scale-105 active:scale-100"
             href="/getting-started/installation"
