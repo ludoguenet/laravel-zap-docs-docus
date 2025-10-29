@@ -1,33 +1,33 @@
 <template>
-  <div class="relative isolate bg-gradient-to-b from-white to-amber-50/30 dark:from-gray-900 dark:to-gray-900/95 overflow-hidden">
+    <div class="relative isolate bg-gradient-to-b from-white to-amber-50/30 overflow-hidden">
     <!-- Ambient background effects -->
     <div class="absolute inset-0 -z-10">
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber-200/20 dark:bg-amber-500/5 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-300/20 dark:bg-amber-400/5 rounded-full blur-3xl"></div>
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-300/20 rounded-full blur-3xl"></div>
     </div>
 
     <div class="flex flex-col lg:grid py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 gap-12 sm:gap-y-16">
       <div class="text-center max-w-6xl mx-auto">
         <!-- Subtitle badge -->
-        <div class="mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20">
+        <div class="mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-200">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
           </span>
-          <span class="text-sm font-medium text-amber-900 dark:text-amber-300">
+          <span class="text-sm font-medium text-amber-900">
             Open Source Laravel Package
           </span>
         </div>
 
         <!-- Main headline -->
-        <h1 class="mx-auto max-w-5xl font-display text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-50 sm:text-6xl lg:text-7xl leading-[1.1]">
+        <h1 class="mx-auto max-w-5xl font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl leading-[1.1]">
           <span class="inline-block">
             The
-            <span class="relative inline-block whitespace-nowrap text-amber-500 dark:text-amber-400">
+            <span class="relative inline-block whitespace-nowrap text-amber-500">
               <svg
                 aria-hidden="true"
                 viewBox="0 0 418 42"
-                class="absolute top-[70%] left-0 h-[0.58em] w-full fill-amber-300/70 dark:fill-amber-400/40"
+                class="absolute top-[70%] left-0 h-[0.58em] w-full fill-amber-300/70"
                 preserveAspectRatio="none"
               >
                 <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
@@ -36,17 +36,17 @@
             </span>
           </span>
           <br />
-          <span class="inline-block bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-slate-50 dark:via-slate-100 dark:to-slate-50 bg-clip-text text-transparent">
+          <span class="inline-block bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
             Calendar Management
           </span>
           <br />
-          <span class="inline-block text-slate-800 dark:text-slate-200">
+          <span class="inline-block text-slate-800">
             System For Laravel
           </span>
         </h1>
 
         <!-- Description -->
-        <p class="mx-auto mt-6 max-w-3xl text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+        <p class="mx-auto mt-6 max-w-3xl text-lg sm:text-xl text-slate-600 leading-relaxed font-light">
           A flexible, performant, and developer-friendly calendar management
           system with deep Laravel integration and intuitive APIs.
         </p>
@@ -54,7 +54,7 @@
         <!-- CTA buttons -->
         <div class="mt-8 sm:mt-10 flex flex-wrap gap-4 justify-center items-center">
           <a
-            class="group relative inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl text-white bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/40 focus:ring-2 ring-amber-400 dark:ring-amber-500 focus:outline-none transition-all duration-200 ease-out hover:scale-105 active:scale-100"
+            class="group relative inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl text-white bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/40 focus:ring-2 ring-amber-400 focus:outline-none transition-all duration-200 ease-out hover:scale-105 active:scale-100"
             href="/getting-started/installation"
           >
             <span>Get Started</span>
@@ -74,7 +74,7 @@
           </a>
 
           <a
-            class="group inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-md hover:shadow-lg border border-slate-200 dark:border-slate-700 focus:ring-2 ring-slate-300 dark:ring-slate-600 focus:outline-none transition-all duration-200 ease-out"
+            class="group inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl text-slate-700 bg-white hover:bg-slate-50 shadow-md hover:shadow-lg border border-slate-200 focus:ring-2 ring-slate-300 focus:outline-none transition-all duration-200 ease-out"
             href="https://github.com/ludoguenet/zap-for-laravel"
             rel="noopener"
             target="_blank"
@@ -91,7 +91,7 @@
         </div>
 
         <!-- Social proof -->
-        <div class="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+        <div class="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500">
           <div class="flex items-center gap-2">
             <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />

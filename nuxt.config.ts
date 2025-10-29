@@ -7,10 +7,6 @@ export default defineNuxtConfig({
     "@nuxt/eslint"
     ],
     css: ['~/assets/css/main.css'],
-    colorMode: {
-        preference: 'light',
-        fallback: 'light',
-    },
     app: {
         head: {
             link: [
@@ -57,6 +53,9 @@ export default defineNuxtConfig({
                 { name: 'apple-mobile-web-app-title', content: 'Zap for Laravel' }
             ]
         }
+    },
+    ui: {
+        colorMode: false
     },
     content: {
         build: {
