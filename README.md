@@ -11,7 +11,6 @@ This is the official documentation site for Zap, built with Docus to provide a c
 
 - 🎨 **Beautiful Design** - Clean, modern documentation theme optimized for code examples
 - 📱 **Responsive** - Mobile-first design for coding on the go
-- 🌙 **Dark Mode** - Perfect for late-night coding sessions
 - 🔍 **Search** - Quickly find Zap methods and examples
 - 📝 **Rich Content** - Enhanced markdown with interactive code examples
 - 🎯 **Laravel-focused** - Tailored specifically for Laravel developers

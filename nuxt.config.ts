@@ -1,11 +1,6 @@
 export default defineNuxtConfig({
     extends: ['docus'],
-    modules: [
-    "@nuxt/ui",
-    "@nuxt/image",
-    "@nuxt/content",
-    "@nuxt/eslint"
-    ],
+    modules: ["@nuxt/ui", "@nuxt/image", "@nuxt/content", "@nuxt/eslint"],
     css: ['~/assets/css/main.css'],
     app: {
         head: {
@@ -60,7 +55,15 @@ export default defineNuxtConfig({
     content: {
         build: {
             markdown: {
-            highlight: {
+                highlight: {
+                    theme: {
+                        // Default theme (same as single string)
+                        default: 'catppuccin-mocha',
+                        // Theme used if `html.dark`
+                        dark: 'catppuccin-mocha',
+                        // Theme used if `html.sepia`
+                        sepia: 'catppuccin-mocha'
+                    },
                     langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml', 'php']
                 }
             }
