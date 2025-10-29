@@ -58,11 +58,11 @@ export default defineNuxtConfig({
                 highlight: {
                     theme: {
                         // Default theme (same as single string)
-                        default: 'catppuccin-mocha',
+                        default: 'tokyo-night',
                         // Theme used if `html.dark`
-                        dark: 'catppuccin-mocha',
+                        dark: 'tokyo-night',
                         // Theme used if `html.sepia`
-                        sepia: 'catppuccin-mocha'
+                        sepia: 'tokyo-night'
                     },
                     langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml', 'php']
                 }
