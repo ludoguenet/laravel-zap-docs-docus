@@ -8,15 +8,9 @@
 
     <div class="flex flex-col lg:grid py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 gap-12 sm:gap-y-16">
       <div class="text-center max-w-6xl mx-auto">
-        <!-- Subtitle badge -->
-        <div class="mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-200">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-          </span>
-          <span class="text-sm font-medium text-amber-900">
-            Open Source Laravel Package
-          </span>
+        <!-- Product Hunt Badge -->
+        <div class="mb-8 flex justify-center">
+          <a href="https://www.producthunt.com/products/zap-for-laravel?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-zap&#0045;for&#0045;laravel" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1032896&theme=light&t=1761901586047" alt="Zap&#0032;For&#0032;Laravel - The&#0032;Missing&#0032;Calendar&#0032;Management&#0032;System&#0032;For&#0032;Laravel | Product Hunt" style="width: 200px; height: 43px;" width="200" height="43" /></a>
         </div>
 
         <!-- Main headline -->
