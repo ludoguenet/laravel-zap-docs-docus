@@ -8,10 +8,6 @@
 
     <div class="flex flex-col lg:grid py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 gap-12 sm:gap-y-16">
       <div class="text-center max-w-6xl mx-auto">
-        <!-- Product Hunt Badge -->
-        <div class="mb-8 flex justify-center">
-          <a href="https://www.producthunt.com/products/zap-for-laravel?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-zap&#0045;for&#0045;laravel" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1032896&theme=light&t=1761901586047" alt="Zap&#0032;For&#0032;Laravel - The&#0032;Missing&#0032;Calendar&#0032;Management&#0032;System&#0032;For&#0032;Laravel | Product Hunt" style="width: 200px; height: 43px;" width="200" height="43" /></a>
-        </div>
 
         <!-- Main headline -->
         <h1 class="mx-auto max-w-5xl font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl leading-[1.1]">
