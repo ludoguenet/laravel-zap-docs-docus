@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 @theme static {
   --font-sans: 'Montserrat', sans-serif;
 }
@@ -7,5 +5,5 @@
 /* Darker background for code blocks with Material Theme Darker */
 .shiki,
 .shiki span {
-  @apply bg-neutral-800
+  background-color: #1e1e2f !important;
 }

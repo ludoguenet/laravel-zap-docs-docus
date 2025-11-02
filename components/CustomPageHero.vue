@@ -105,7 +105,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-// Refined hero component with premium design and animations
-</script>
