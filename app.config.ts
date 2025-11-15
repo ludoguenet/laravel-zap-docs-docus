@@ -6,7 +6,7 @@ export default defineAppConfig({
     },
   },
   socials: {
-    x: 'https://x.com/LaravelJutsu',
+    x: 'https://x.com/LudovicGuenet',
     linkedin: 'https://www.linkedin.com/in/ludoguenet',
   },
   github: {
@@ -26,7 +26,7 @@ export default defineAppConfig({
       },
       {
         label: 'Twitter',
-        to: 'https://x.com/LaravelJutsu',
+        to: 'https://x.com/LudovicGuenet',
         target: '_blank'
       }
     ]
