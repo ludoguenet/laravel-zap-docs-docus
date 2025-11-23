@@ -1,4 +1,5 @@
 import { defineEventHandler } from 'h3'
+import { $fetch } from 'ofetch'
 
 interface PackagistDownloads {
   total?: number
@@ -14,17 +15,12 @@ interface PackagistResponse {
 
 export default defineEventHandler(async () => {
   try {
-    const response = await fetch('https://packagist.org/packages/laraveljutsu/zap.json')
-
-    if (!response.ok) {
-      return {
-        total: null,
-        monthly: null,
-        daily: null,
+    const data = (await $fetch<PackagistResponse>(
+      'https://packagist.org/packages/laraveljutsu/zap.json',
+      {
+        method: 'GET',
       }
-    }
-
-    const data = (await response.json()) as PackagistResponse
+    )) as PackagistResponse
     const downloads = data.package?.downloads ?? {}
 
     return {

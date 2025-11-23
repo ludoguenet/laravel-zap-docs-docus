@@ -1,25 +1,20 @@
+import { useFetch } from 'nuxt/app'
 import { computed } from 'vue'
 
+interface ZapDownloadsResponse {
+  total: number | null
+  monthly?: number | null
+  daily?: number | null
+}
+
 export function useZapDownloads() {
-  const downloadsTotal = useState<number | null>('zap-downloads-total', () => null)
-  const isLoading = useState<boolean>('zap-downloads-loading', () => false)
+  const { data, pending } = useFetch<ZapDownloadsResponse>('/api/zap-downloads', {
+    server: true,
+    lazy: false,
+    key: 'zap-downloads',
+  })
 
-  if (downloadsTotal.value === null && !isLoading.value) {
-    isLoading.value = true
-
-    $fetch<{ total: number | null }>('/api/zap-downloads')
-      .then((response) => {
-        if (typeof response?.total === 'number') {
-          downloadsTotal.value = response.total
-        }
-      })
-      .catch(() => {
-        // Ignore errors; downloads are a nice-to-have UI detail.
-      })
-      .finally(() => {
-        isLoading.value = false
-      })
-  }
+  const downloadsTotal = computed<number | null>(() => data.value?.total ?? null)
 
   const formattedDownloads = computed(() => {
     if (downloadsTotal.value == null) {
@@ -42,6 +37,6 @@ export function useZapDownloads() {
   return {
     downloadsTotal,
     formattedDownloads,
-    isLoading,
+    isLoading: pending,
   }
 }

@@ -1,10 +1,8 @@
 export default defineAppConfig({
   ui: {
-    primary: 'violet',
-    gray: 'slate',
     colors: {
-      primary: 'violet',
-      neutral: 'slate',
+      primary: 'amber',
+      neutral: 'zinc',
     },
   },
   docus: {

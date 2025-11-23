@@ -7,21 +7,21 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
 <template>
   <section
     id="install"
-    class="bg-white dark:bg-[#2b1750] py-16 md:py-20"
+    class="bg-white py-16 md:py-20"
   >
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-3xl">
         <p
-          class="text-xs font-semibold tracking-[0.3em] uppercase text-[#552583]/80 dark:text-[#FDB927]/80"
+          class="text-xs font-semibold tracking-[0.3em] uppercase text-[#552583]/80"
         >
           Install in seconds
         </p>
         <h2
-          class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text:white"
+          class="mt-3 text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900"
         >
           From composer install to bookable slots in three steps.
         </h2>
-        <p class="mt-3 text-sm md:text-base text-gray-600 dark:text-gray-200">
+        <p class="mt-3 text-sm md:text-base text-gray-600">
           Zap is a focused calendar engine for schedules on your existing models.
         </p>
       </div>
@@ -38,10 +38,10 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
               1
             </span>
             <div>
-              <p class="font-semibold text-gray-900 dark:text-white">
+              <p class="font-semibold text-gray-900">
                 Publish migrations
               </p>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-300 font-mono">
+              <p class="mt-1 text-xs text-gray-500 font-mono">
                 php artisan vendor:publish --tag="zap-migrations"
               </p>
             </div>
@@ -53,10 +53,10 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
               2
             </span>
             <div>
-              <p class="font-semibold text-gray-900 dark:text-white">
+              <p class="font-semibold text-gray-900">
                 Run the migrations
               </p>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-300 font-mono">
+              <p class="mt-1 text-xs text-gray-500 font-mono">
                 php artisan migrate
               </p>
             </div>
@@ -68,10 +68,10 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
               3
             </span>
             <div>
-              <p class="font-semibold text-gray-900 dark:text-white">
+              <p class="font-semibold text-gray-900">
                 Add the schedulable trait
               </p>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-300 font-mono">
+              <p class="mt-1 text-xs text-gray-500 font-mono">
                 use Zap\\Concerns\\HasSchedules;
               </p>
             </div>
