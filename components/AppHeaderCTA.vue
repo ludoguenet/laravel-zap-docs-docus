@@ -1,6 +1,34 @@
 <template>
-    <!-- Product Hunt Badge -->
-    <div class="hidden lg:inline-flex w-40">
-        <a href="https://www.producthunt.com/products/zap-for-laravel?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-zap&#0045;for&#0045;laravel" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1032896&theme=light&t=1761901586047" alt="Zap&#0032;For&#0032;Laravel - The&#0032;Missing&#0032;Calendar&#0032;Management&#0032;System&#0032;For&#0032;Laravel | Product Hunt" style="width: 200px; height: 43px;" width="150" height="43" /></a>
+  <nav class="flex items-center gap-4">
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <NuxtLink
+        to="/docs/getting-started/introduction"
+        class="text-gray-700 hover:text-[#552583] transition-colors"
+      >
+        Documentation
+      </NuxtLink>
+      <a
+        href="#install"
+        class="text-gray-700 hover:text-[#552583] transition-colors"
+      >
+        Installation
+      </a>
+      <a
+        href="#examples"
+        class="text-gray-700 hover:text-[#552583] transition-colors"
+      >
+        Examples
+      </a>
     </div>
+    <a
+      href="https://github.com/ludoguenet/laravel-zap"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open Laravel Zap on GitHub"
+      class="inline-flex items-center gap-2 text-sm font-semibold bg-[#552583] text-white px-4 py-2 rounded-lg shadow-sm hover:-translate-y-0.5 hover:shadow-md hover:bg-[#432069] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FDB927] focus-visible:ring-offset-white transition transform"
+    >
+      <UIcon name="i-simple-icons-github" class="w-4 h-4" />
+      <span class="hidden sm:inline">GitHub</span>
+    </a>
+  </nav>
 </template>

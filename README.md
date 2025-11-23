@@ -21,8 +21,8 @@ This is the official documentation site for Zap, built with Docus to provide a c
 
 ```bash
 # Clone the documentation
-git clone https://github.com/ludoguenet/zap-for-laravel-docs.git
-cd zap-for-laravel-docs
+git clone https://github.com/ludoguenet/laravel-zap-docs-docus.git
+cd laravel-zap-docs-docus
 
 # Install dependencies
 npm install
@@ -117,7 +117,7 @@ This documentation is for the Zap package. To install and use Zap in your projec
 composer require laraveljutsu/zap
 ```
 
-- **Package Repository**: [ludoguenet/zap-for-laravel](https://github.com/ludoguenet/zap-for-laravel)
+- **Package Repository**: [ludoguenet/laravel-zap](https://github.com/ludoguenet/laravel-zap)
 - **Author**: [Ludovic Guénet](https://ludovicguenet.dev)
 - **License**: MIT
 
@@ -128,3 +128,19 @@ Documentation: [MIT License](https://opensource.org/licenses/MIT)
 ---
 
 **⚡ Made with ❤️ by [Ludovic Guénet](https://ludovicguenet.dev) for the Laravel community ⚡**
+
+## 🏀 Landing page & logo
+
+The marketing landing page at `/` is built from Vue components in `components/landing` and uses Tailwind CSS utility classes.
+
+- **Build for deployment**:
+
+```bash
+npm run build
+```
+
+This generates the production site in `.output/public`, which you can deploy to any static host (Vercel, Netlify, GitHub Pages, etc.).
+
+- **Swap the logo**:
+  - Replace `public/logo.png` with your own logo while keeping the same filename, **or**
+  - Update the `src` attributes in `components/AppHeaderLogo.vue` and `components/landing/Hero.vue` to point at your preferred image path.

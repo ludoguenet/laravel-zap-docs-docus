@@ -1,34 +1,48 @@
 export default defineAppConfig({
   ui: {
+    primary: 'violet',
+    gray: 'slate',
     colors: {
-      primary: 'amber',
-      neutral: 'slate'
+      primary: 'violet',
+      neutral: 'slate',
     },
   },
-  socials: {
-    x: 'https://x.com/LudovicGuenet',
-    linkedin: 'https://www.linkedin.com/in/ludoguenet',
-  },
-  github: {
-    url: 'https://github.com/ludoguenet/zap-for-laravel',
-    branch: 'main'
-  },
-  footer: {
-    credits: {
-      name: 'Zap for Laravel',
-      to: 'https://ludovicguenet.dev',
-      text: 'Created by Ludovic Guénet'
+  docus: {
+    title: 'Laravel Zap',
+    description: 'Flexible schedule management for modern Laravel applications',
+    image: '/social-card.png',
+    socials: {
+      twitter: 'LudovicGuenet',
+      github: 'laraveljutsu/zap',
     },
-    links: [
-      {
-        label: 'Documentation',
-        to: '/getting-started/installation'
+    github: {
+      repo: 'laraveljutsu/zap',
+    },
+    aside: {
+      level: 0,
+      collapsed: false,
+      exclude: [],
+    },
+    main: {
+      padded: false,
+      fluid: true,
+    },
+    header: {
+      logo: {
+        light: '/logo.png',
+        dark: '/logo.png',
+        alt: 'Laravel Zap',
       },
-      {
-        label: 'Twitter',
-        to: 'https://x.com/LudovicGuenet',
-        target: '_blank'
-      }
-    ]
-  }
+      showLinkIcon: true,
+      exclude: [],
+      fluid: true,
+    },
+    footer: {
+      credits: {
+        icon: 'IconDocus',
+        text: 'Made with 💛 by Laravel Jutsu',
+        href: 'https://www.youtube.com/@LaravelJutsu',
+      },
+    },
+  },
 })

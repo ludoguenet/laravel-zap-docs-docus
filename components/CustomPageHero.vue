@@ -65,7 +65,7 @@
 
           <a
             class="group inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-xl text-slate-700 bg-white hover:bg-slate-50 shadow-md hover:shadow-lg border border-slate-200 focus:ring-2 ring-slate-300 focus:outline-none transition-all duration-200 ease-out"
-            href="https://github.com/ludoguenet/zap-for-laravel"
+            href="https://github.com/ludoguenet/laravel-zap"
             rel="noopener"
             target="_blank"
           >

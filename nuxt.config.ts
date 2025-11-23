@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
     extends: ['docus'],
     modules: ["@nuxt/ui", "@nuxt/image", "@nuxt/content", "@nuxt/eslint"],
+    // Use layer-relative alias so Nuxt resolves from /app
     css: ['~/assets/css/main.css'],
     app: {
         head: {
@@ -16,22 +17,38 @@ export default defineNuxtConfig({
             ],
             meta: [
                 // Basic SEO
-                { name: 'description', content: 'A flexible, performant, and developer-friendly calendar management system for Laravel. Created by Ludovic Guénet.' },
-                { name: 'keywords', content: 'Laravel, Calendar Management, PHP, Appointment Booking, Availability, Zap for Laravel' },
-                { name: 'author', content: 'Ludovic Guénet' },
+                {
+                    name: 'description',
+                    content:
+                        'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.'
+                },
+                {
+                    name: 'keywords',
+                    content:
+                        'Laravel Zap, Calendar Management, Scheduling, PHP, Appointment Booking, Availability, Laravel package'
+                },
+                { name: 'author', content: 'Ludovic Gu�net' },
 
                 // Open Graph / Facebook
                 { property: 'og:type', content: 'website' },
-                { property: 'og:title', content: 'Zap for Laravel - The Missing Calendar Management System For Laravel' },
-                { property: 'og:description', content: 'A flexible, performant, and developer-friendly calendar management system for Laravel. Created by Ludovic Guénet.' },
+                { property: 'og:title', content: 'Laravel Zap  Flexible schedule management for Laravel' },
+                {
+                    property: 'og:description',
+                    content:
+                        'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.'
+                },
                 { property: 'og:image', content: '/social-card.png' },
-                { property: 'og:url', content: 'https://zap-for-laravel.com' },
-                { property: 'og:site_name', content: 'Zap for Laravel' },
+                { property: 'og:url', content: 'https://laravel-zap.com' },
+                { property: 'og:site_name', content: 'Laravel Zap' },
 
                 // Twitter Card
                 { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:title', content: 'Zap for Laravel - The Missing Calendar Management System For Laravel' },
-                { name: 'twitter:description', content: 'A flexible, performant, and developer-friendly calendar management system for Laravel. Created by Ludovic Guénet.' },
+                { name: 'twitter:title', content: 'Laravel Zap  Flexible schedule management for Laravel' },
+                {
+                    name: 'twitter:description',
+                    content:
+                        'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.'
+                },
                 { name: 'twitter:image', content: '/social-card.png' },
                 { name: 'twitter:creator', content: '@LudovicGuenet' },
                 { name: 'twitter:site', content: '@LudovicGuenet' },
@@ -39,31 +56,26 @@ export default defineNuxtConfig({
                 // Additional SEO
                 { name: 'robots', content: 'index, follow' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { name: 'theme-color', content: '#f59e0b' },
+                { name: 'theme-color', content: '#7c3aed' },
 
                 // PWA
                 { name: 'mobile-web-app-capable', content: 'yes' },
                 { name: 'apple-mobile-web-app-capable', content: 'yes' },
                 { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-                { name: 'apple-mobile-web-app-title', content: 'Zap for Laravel' }
+                { name: 'apple-mobile-web-app-title', content: 'Laravel Zap' }
             ]
         }
     },
-    ui: {
-        colorMode: false
+    colorMode: {
+        preference: 'light',
+        fallback: 'light',
+        classSuffix: ''
     },
     content: {
         build: {
             markdown: {
                 highlight: {
-                    theme: {
-                        // Default theme (same as single string)
-                        default: 'tokyo-night',
-                        // Theme used if `html.dark`
-                        dark: 'tokyo-night',
-                        // Theme used if `html.sepia`
-                        sepia: 'tokyo-night'
-                    },
+                    theme: 'tokyo-night',
                     langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml', 'php']
                 }
             }
