@@ -5,7 +5,7 @@
 This is the official documentation site for Zap, built with Docus to provide a clean, modern, and developer-friendly experience for learning about Laravel's most powerful scheduling package.
 
 > [!TIP]
-> New to Zap? Start with the [Installation Guide](https://zap-for-laravel.com/installation) and [Quick Start](https://zap-for-laravel.com/quick-start) sections.
+> New to Zap? Start with the [Installation Guide](https://laravel-zap.com/docs/getting-started/installation) and [Quick Start](https://laravel-zap.com/docs/getting-started/quick-start) sections.
 
 ## ✨ Features
 
@@ -36,7 +36,7 @@ Your documentation site will be running at `http://localhost:3000`
 ## 📁 Documentation Structure
 
 ```
-zap-for-laravel-docs/
+laravel-zap-docs/
 ├── content/
 │   ├── index.md                    # Homepage - Zap introduction
 │   ├── 1.installation.md           # Installation and setup guide
