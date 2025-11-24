@@ -13,7 +13,7 @@ export default defineNuxtPlugin(() => {
     description: 'Flexible schedule management for modern Laravel applications',
     sameAs: [
       'https://twitter.com/LudovicGuenet',
-      'https://github.com/laraveljutsu/zap',
+      'https://github.com/ludoguenet/laravel-zap',
     ],
   }
 
@@ -57,7 +57,7 @@ export default defineNuxtPlugin(() => {
     description:
       'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.',
     url: siteUrl,
-    codeRepository: 'https://github.com/laraveljutsu/zap',
+    codeRepository: 'https://github.com/ludoguenet/laravel-zap',
     programmingLanguage: 'PHP',
     runtimePlatform: 'Laravel',
     softwareVersion: 'Latest',
@@ -108,7 +108,7 @@ export default defineNuxtPlugin(() => {
   // Create breadcrumb schema
   const createBreadcrumbSchema = () => {
     const pathSegments = route.path.split('/').filter(Boolean)
-    
+
     if (pathSegments.length === 0) return null
 
     const items = [

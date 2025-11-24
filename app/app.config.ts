@@ -18,10 +18,10 @@ export default defineAppConfig({
     image: '/social-card.png',
     socials: {
       twitter: 'LudovicGuenet',
-      github: 'laraveljutsu/zap',
+      github: 'ludoguenet/laravel-zap',
     },
     github: {
-      repo: 'laraveljutsu/zap',
+      repo: 'ludoguenet/laravel-zap',
     },
     aside: {
       level: 0,
