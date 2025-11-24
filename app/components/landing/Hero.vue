@@ -7,30 +7,30 @@
     <div class="hero-gradient-orb hero-gradient-orb--3" />
     
     <div
-      class="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-24 flex flex-col md:flex-row items-center gap-12 md:gap-20 lg:gap-24"
+      class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-24 flex flex-col md:flex-row items-center gap-12 md:gap-20 lg:gap-24"
     >
       <!-- Calendar visual -->
-      <div class="flex-1 flex justify-center md:justify-start w-full">
+      <div class="flex-1 flex justify-center md:justify-start w-full max-[910px]:hidden">
         <LandingCalendarPreview />
       </div>
 
       <!-- Copy -->
-      <div class="flex-1 text-center md:text-left space-y-5">
+      <div class="flex-1 text-center min-[911px]:text-left space-y-5 w-full min-w-0">
         <div class="space-y-1">
-          <h1 class="landing-hero__title whitespace-nowrap">
+          <h1 class="landing-hero__title whitespace-normal sm:whitespace-nowrap">
             ⚡ Laravel Zap
           </h1>
-          <p class="landing-eyebrow whitespace-nowrap">
+          <p class="landing-eyebrow whitespace-normal break-words">
             Open-source schedule engine for Laravel
           </p>
         </div>
-        <p class="landing-hero__subtitle max-w-xl md:max-w-2xl mx-auto md:mx-0">
+        <p class="landing-hero__subtitle max-w-xl min-[911px]:max-w-2xl mx-auto min-[911px]:mx-0">
           Flexible schedule management for modern Laravel applications.
         </p>
 
         <!-- CTAs -->
         <div
-          class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2"
+          class="flex flex-wrap items-center justify-center min-[911px]:justify-start gap-4 pt-2"
         >
           <a href="#install" class="cta-primary" aria-label="Get started with Laravel Zap">
             Get Started
@@ -46,7 +46,7 @@
 
         <!-- Schedule stats -->
         <div
-          class="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs font-medium pt-4"
+          class="flex flex-wrap items-center justify-center min-[911px]:justify-start gap-2 sm:gap-3 text-xs font-medium pt-4 px-2 sm:px-0"
         >
           <span class="stat-chip">
             <UIcon name="i-heroicons-bolt" class="w-3.5 h-3.5" />

@@ -21,6 +21,26 @@ export default defineNuxtConfig({
             routes: ['/'],
         },
         compressPublicAssets: true,
+        minify: true,
+    },
+    
+    // Build optimizations
+    experimental: {
+        payloadExtraction: true,
+    },
+    
+    // Performance optimizations
+    vite: {
+        build: {
+            cssCodeSplit: true,
+            rollupOptions: {
+                output: {
+                    manualChunks: {
+                        'vue-vendor': ['vue'],
+                    },
+                },
+            },
+        },
     },
     
     // Image optimization
@@ -52,11 +72,11 @@ export default defineNuxtConfig({
                     content:
                         'Laravel Zap, Calendar Management, Scheduling, PHP, Appointment Booking, Availability, Laravel package'
                 },
-                { name: 'author', content: 'Ludovic Gu�net' },
+                { name: 'author', content: 'Ludovic Guénet' },
 
                 // Open Graph / Facebook
                 { property: 'og:type', content: 'website' },
-                { property: 'og:title', content: 'Laravel Zap  Flexible schedule management for Laravel' },
+                { property: 'og:title', content: 'Laravel Zap - Flexible schedule management for Laravel' },
                 {
                     property: 'og:description',
                     content:
@@ -68,7 +88,7 @@ export default defineNuxtConfig({
 
                 // Twitter Card
                 { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:title', content: 'Laravel Zap  Flexible schedule management for Laravel' },
+                { name: 'twitter:title', content: 'Laravel Zap - Flexible schedule management for Laravel' },
                 {
                     name: 'twitter:description',
                     content:
@@ -100,7 +120,10 @@ export default defineNuxtConfig({
         build: {
             markdown: {
                 highlight: {
-                    theme: 'tokyo-night',
+                    theme: {
+                        light: 'material-theme-lighter',
+                        dark: 'material-theme-palenight'
+                    },
                     langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml', 'php']
                 }
             }

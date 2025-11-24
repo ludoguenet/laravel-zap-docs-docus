@@ -31,45 +31,41 @@ const { data: quickstartSnippet } = await useAsyncData(
             Attach schedules to your models and let Zap answer what is available.
           </p>
           <ul
-            class="mt-2 space-y-2 text-sm theme-text list-none"
+            class="mt-2 space-y-3 text-sm theme-text list-none"
           >
-            <li class="flex gap-2">
-              <span class="accent-dot flex-shrink-0" />
+            <li>
               <p>
-                <code class="inline-callout text-xs">
+                <code class="highlighted-term">
                   Zap::for($model)
                 </code>
                 <span>&nbsp;attaches a schedule to any model.</span>
               </p>
             </li>
-            <li class="flex gap-2">
-              <span class="accent-dot flex-shrink-0" />
+            <li>
               <p>
-                <code class="inline-callout text-xs">
+                <code class="highlighted-term">
                   named('Office Hours')
                 </code>
                 <span>&nbsp;labels a schedule for later queries.</span>
               </p>
             </li>
-            <li class="flex gap-2">
-              <span class="accent-dot flex-shrink-0" />
+            <li>
               <p>
-                <code class="inline-callout text-xs">
+                <code class="highlighted-term">
                   availability()
                 </code>
                 <span>
                   &nbsp;defines where bookings are allowed;
-                  <code class="inline-callout text-xs">
+                  <code class="highlighted-term">
                     appointment()
                   </code>
                   stores the bookings.
                 </span>
               </p>
             </li>
-            <li class="flex gap-2">
-              <span class="accent-dot flex-shrink-0" />
+            <li>
               <p>
-                <code class="inline-callout text-xs">
+                <code class="highlighted-term">
                   save()
                 </code>
                 <span>&nbsp;persists schedules for conflict checks and slots.</span>
