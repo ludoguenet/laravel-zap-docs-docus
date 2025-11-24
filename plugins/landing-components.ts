@@ -5,11 +5,11 @@ import LandingRealWorldExamples from '../components/landing/RealWorldExamples.vu
 import LandingCallToAction from '../components/landing/CallToAction.vue'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  if (process.dev) {
+  if (import.meta.dev) {
     // Helps verify in browser console that landing components plugin is loaded
     // and that MDC "::::Landing*" blocks can resolve correctly.
     // This only runs in development.
-    // eslint-disable-next-line no-console
+     
     console.debug('[landing-components] plugin loaded')
   }
 

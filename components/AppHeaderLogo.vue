@@ -4,6 +4,6 @@
       src="/logo.png"
       class="h-8 w-auto"
       alt="Laravel Zap logo"
-    />
+    >
   </div>
 </template>

@@ -15,6 +15,7 @@ const route = useRoute()
 const { locale, isEnabled, t } = useDocusI18n()
 const appConfig = useAppConfig()
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
+const { $addPageSchema } = useNuxtApp()
 
 const collectionName = computed(() =>
   isEnabled.value ? (`docs_${locale.value}` as keyof Collections) : 'docs',
@@ -59,6 +60,11 @@ watch(
 defineOgImageComponent('Docs', {
   headline: headline.value,
 })
+
+// Add structured data for documentation page
+if ($addPageSchema && page.value) {
+  $addPageSchema(page.value)
+}
 </script>
 
 <template>

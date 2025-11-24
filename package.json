@@ -5,7 +5,9 @@
     "build": "nuxt build --extends docus",
     "generate": "nuxt generate --extends docus",
     "preview": "nuxt preview --extends docus",
-    "analyze": "nuxt analyze --extends docus"
+    "analyze": "nuxt analyze --extends docus",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/content": "^3.7.1",
