@@ -29,23 +29,25 @@ const { formattedDownloads, isLoading } = useZapDownloads()
       <AppHeaderLogo />
     </template>
 
-    <template #right>
-      <UButton
-        :to="githubUrl"
-        target="_blank"
-        rel="noopener"
-        color="neutral"
-        variant="ghost"
-        class="inline-flex items-center gap-1.5"
-      >
-        <span
-          v-if="!isLoading && formattedDownloads"
-          class="inline-flex items-center text-sm text-neutral-600 font-mono"
-        >
-          {{ formattedDownloads }}
-        </span>
-        <UIcon name="i-simple-icons-github" class="w-5 h-5" />
-      </UButton>
-    </template>
+<template #right>
+  <div class="inline-flex items-center gap-2">
+    <span
+      v-if="!isLoading && formattedDownloads"
+      class="text-sm text-neutral-600 font-mono mt-1.5"
+    >
+      {{ formattedDownloads }}
+    </span>
+    <UButton
+      :to="githubUrl"
+      target="_blank"
+      rel="noopener"
+      color="neutral"
+      variant="ghost"
+      class="inline-flex items-center gap-1.5"
+    >
+      <UIcon name="i-simple-icons-github" class="w-5 h-5" />
+    </UButton>
+  </div>
+</template>
   </UHeader>
 </template>

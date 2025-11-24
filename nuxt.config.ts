@@ -1,8 +1,33 @@
+import { defineNuxtConfig } from "nuxt/config";
+
 export default defineNuxtConfig({
     extends: ['docus'],
-    modules: ["@nuxt/ui", "@nuxt/image", "@nuxt/content", "@nuxt/eslint"],
+    modules: ["@nuxt/ui", "@nuxt/image", "@nuxt/content", "@nuxt/eslint", "@nuxtjs/sitemap"],
+    
+    site: {
+        url: 'https://laravel-zap.com',
+    },
+    
+    sitemap: {
+        strictNuxtContentPaths: true,
+    },
     // Use layer-relative alias so Nuxt resolves from /app
     css: ['~/assets/css/main.css'],
+    
+    // Production optimizations
+    nitro: {
+        prerender: {
+            crawlLinks: true,
+            routes: ['/'],
+        },
+        compressPublicAssets: true,
+    },
+    
+    // Image optimization
+    image: {
+        quality: 80,
+        format: ['webp', 'avif', 'png', 'jpg'],
+    },
     app: {
         head: {
             link: [
@@ -27,7 +52,7 @@ export default defineNuxtConfig({
                     content:
                         'Laravel Zap, Calendar Management, Scheduling, PHP, Appointment Booking, Availability, Laravel package'
                 },
-                { name: 'author', content: 'Ludovic Guénet' },
+                { name: 'author', content: 'Ludovic Guï¿½net' },
 
                 // Open Graph / Facebook
                 { property: 'og:type', content: 'website' },
@@ -37,7 +62,7 @@ export default defineNuxtConfig({
                     content:
                         'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.'
                 },
-                { property: 'og:image', content: '/social-card.png' },
+                { property: 'og:image', content: 'https://laravel-zap.com/social-card.png' },
                 { property: 'og:url', content: 'https://laravel-zap.com' },
                 { property: 'og:site_name', content: 'Laravel Zap' },
 
@@ -49,7 +74,7 @@ export default defineNuxtConfig({
                     content:
                         'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.'
                 },
-                { name: 'twitter:image', content: '/social-card.png' },
+                { name: 'twitter:image', content: 'https://laravel-zap.com/social-card.png' },
                 { name: 'twitter:creator', content: '@LudovicGuenet' },
                 { name: 'twitter:site', content: '@LudovicGuenet' },
 

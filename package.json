@@ -2,7 +2,10 @@
   "name": "laravel-zap-docs",
   "scripts": {
     "dev": "nuxt dev --extends docus",
-    "build": "nuxt build --extends docus"
+    "build": "nuxt build --extends docus",
+    "generate": "nuxt generate --extends docus",
+    "preview": "nuxt preview --extends docus",
+    "analyze": "nuxt analyze --extends docus"
   },
   "dependencies": {
     "@nuxt/content": "^3.7.1",
@@ -14,5 +17,8 @@
     "eslint": "^9.38.0",
     "nuxt": "^4.1.2",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/sitemap": "^7.4.7"
   }
 }

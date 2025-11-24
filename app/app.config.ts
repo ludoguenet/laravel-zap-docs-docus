@@ -17,7 +17,7 @@ export default defineAppConfig({
       repo: 'laraveljutsu/zap',
     },
     aside: {
-      level: 0,
+      level: 1,
       collapsed: false,
       exclude: [],
     },

@@ -9,4 +9,10 @@ Zap::for($doctor)
     ->addPeriod('14:00', '17:00')
     ->weekly(['monday', 'tuesday', 'wednesday', 'thursday', 'friday'])
     ->save();
+
+// Get bookable slots
+$slots = $doctor->getBookableSlots('2025-01-15', 60, 15);
+
+// Check if a specific time is bookable
+$isAvailable = $doctor->isBookableAt('2025-01-15', '15:00', 60);
 ```

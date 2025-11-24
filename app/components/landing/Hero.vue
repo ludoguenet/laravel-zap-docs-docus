@@ -4,156 +4,27 @@
     class="bg-gradient-to-b from-[#fdf7e9] via-white to-white text-gray-800"
   >
     <div
-      class="max-w-6xl mx-auto px-6 py-20 md:py-24 flex flex-col md:flex-row items-center gap-10 md:gap-20 lg:gap-28"
+      class="max-w-7xl mx-auto px-6 py-20 md:py-24 flex flex-col md:flex-row items-center gap-12 md:gap-20 lg:gap-24"
     >
-      <!-- Animated schedule visual -->
-      <div class="flex-1 flex justify-center md:justify-start">
-        <div
-          class="relative w-full max-w-md md:max-w-lg group"
-          aria-hidden="true"
-        >
-          <div
-            class="pointer-events-none absolute -inset-6 rounded-3xl bg-[#FDB927]/40 blur-3xl opacity-60"
-          />
-          <div
-            class="relative rounded-3xl bg-white border border-[#552583]/10 shadow-xl p-6 md:p-7 transition-colors duration-200 group-hover:border-[#FDB927]/40"
-          >
-            <div
-              class="flex items-center justify-between text-xs text-gray-500"
-            >
-              <div class="flex flex-col">
-                <span class="font-semibold">Today · Dr. Smith</span>
-                <span class="text-[10px] text-gray-400">
-                  Tuesday · 30 min consultations + 5 min buffer
-                </span>
-              </div>
-              <span
-                class="inline-flex items-center gap-1 rounded-full bg-[#FDB927]/20 text-[#552583] px-2.5 py-0.5 text-[10px] font-semibold"
-              >
-                Dr. Smith
-              </span>
-            </div>
-
-            <div class="mt-5 space-y-3.5 text-xs md:text-[13px]">
-              <div
-                class="flex items-center gap-3.5 rounded-xl px-2 py-1 transition-colors duration-150 group-hover:bg-[#FDB927]/5"
-              >
-                <div
-                  class="w-10 text-right text-gray-400"
-                >
-                  09:00
-                </div>
-                <div
-                  class="flex-1 h-2.5 rounded-full bg-[#FDB927]/20 overflow-hidden"
-                >
-                  <div
-                    class="h-2.5 rounded-full bg-[#FDB927] animate-pulse group-hover:animate-none"
-                    style="width: 60%"
-                  />
-                </div>
-                <span class="text-[11px] text-gray-600">
-                  Consultation · New patient (09:00–09:30)
-                </span>
-              </div>
-
-              <div
-                class="flex items-center gap-3.5 rounded-xl px-2 py-1 transition-colors duration-150 group-hover:bg-[#552583]/5"
-              >
-                <div
-                  class="w-10 text-right text-gray-400"
-                >
-                  09:30
-                </div>
-                <div
-                  class="flex-1 h-2.5 rounded-full bg-[#552583]/15 overflow-hidden"
-                >
-                  <div
-                    class="h-2.5 rounded-full bg-[#552583]"
-                    style="width: 25%"
-                  />
-                </div>
-                <span class="text-[11px] text-gray-600">
-                  Buffer · Room clean‑up (5 min)
-                </span>
-              </div>
-
-              <div
-                class="flex items-center gap-3.5 rounded-xl px-2 py-1 transition-colors duration-150 group-hover:bg-[#FDB927]/5"
-              >
-                <div
-                  class="w-10 text-right text-gray-400"
-                >
-                  09:35
-                </div>
-                <div
-                  class="flex-1 h-2.5 rounded-full bg-[#FDB927]/20 overflow-hidden"
-                >
-                  <div
-                    class="h-2.5 rounded-full bg-[#FDB927]"
-                    style="width: 60%"
-                  />
-                </div>
-                <span class="text-[11px] text-gray-600">
-                  Consultation · Jane Doe (follow‑up)
-                </span>
-              </div>
-
-              <div
-                class="flex items-center gap-3.5 rounded-xl px-2 py-1 transition-colors duration-150 group-hover:bg-gray-100/60"
-              >
-                <div
-                  class="w-10 text-right text-gray-400"
-                >
-                  12:00
-                </div>
-                <div
-                  class="flex-1 h-2.5 rounded-full bg-gray-200 overflow-hidden"
-                >
-                  <div
-                    class="h-2.5 rounded-full bg-gray-300"
-                    style="width: 100%"
-                  />
-                </div>
-                <span class="text-[11px] text-gray-600">
-                  Lunch break · Blocked
-                </span>
-              </div>
-            </div>
-
-            <div
-              class="mt-4 flex items-center justify-between text-[11px] text-gray-500"
-            >
-              <span class="inline-flex items-center gap-1">
-                <span class="h-2 w-2 rounded-full bg-[#FDB927]" />
-                <span>Consultation</span>
-              </span>
-              <span class="inline-flex items-center gap-1">
-                <span class="h-2 w-2 rounded-full bg-[#552583]" />
-                <span>Buffer</span>
-              </span>
-              <span class="inline-flex items-center gap-1">
-                <span
-                  class="h-2 w-2 rounded-full bg-gray-300"
-                />
-                <span>Blocked</span>
-              </span>
-            </div>
-          </div>
-        </div>
+      <!-- Calendar visual -->
+      <div class="flex-1 flex justify-center md:justify-start w-full">
+        <LandingCalendarPreview />
       </div>
 
       <!-- Copy -->
-      <div class="flex-1 text-center md:text-left space-y-6">
-        <p
-          class="text-xs font-semibold tracking-[0.3em] uppercase text-[#552583]/80"
-        >
-          Open-source schedule engine for Laravel
-        </p>
-        <h1
-          class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900"
-        >
-          <span class="block">⚡ Laravel Zap</span>
-        </h1>
+      <div class="flex-1 text-center md:text-left space-y-5">
+        <div class="space-y-1">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 whitespace-nowrap"
+          >
+            ⚡ Laravel Zap
+          </h1>
+          <p
+            class="text-xs font-semibold tracking-[0.3em] uppercase text-[#552583]/80 whitespace-nowrap"
+          >
+            Open-source schedule engine for Laravel
+          </p>
+        </div>
         <p
           class="text-lg md:text-xl text-gray-600 max-w-xl md:max-w-2xl mx-auto md:mx-0"
         >
@@ -180,27 +51,31 @@
           </a>
         </div>
 
-        <!-- Tech badges -->
+        <!-- Schedule stats -->
         <div
           class="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs font-medium pt-4"
         >
           <span
             class="inline-flex items-center rounded-full border border-[#FDB927]/40 bg-[#FDB927]/10 px-3 py-1 text-[#552583]"
           >
-            PHP 8.2+
+            <UIcon name="i-heroicons-bolt" class="w-3.5 h-3.5 mr-1.5" />
+            Fast & Flexible
           </span>
           <span
             class="inline-flex items-center rounded-full border border-[#FDB927]/40 bg-[#FDB927]/10 px-3 py-1 text-[#552583]"
           >
-            Laravel 11+
+            <UIcon name="i-heroicons-clock" class="w-3.5 h-3.5 mr-1.5" />
+            Recurring Events
           </span>
           <span
             class="inline-flex items-center rounded-full border border-[#FDB927]/40 bg-[#FDB927]/10 px-3 py-1 text-[#552583]"
           >
-            MIT License
+            <UIcon name="i-heroicons-code-bracket" class="w-3.5 h-3.5 mr-1.5" />
+            Laravel Native
           </span>
         </div>
       </div>
     </div>
   </section>
 </template>
+
