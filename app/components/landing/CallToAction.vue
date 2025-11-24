@@ -6,16 +6,13 @@ const { data: quickstartSnippet } = await useAsyncData(
 </script>
 
 <template>
-  <section
-    id="api"
-    class="bg-[#f9fafb] border-t border-gray-100 py-16 md:py-20"
-  >
+  <section id="api" class="landing-section landing-section--divider py-16 md:py-20">
     <div class="max-w-6xl mx-auto px-6">
       <div
         class="grid gap-10 md:gap-12 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start"
       >
         <!-- Quick start snippet rendered via @nuxt/content (Docus) -->
-        <div class="rounded-xl overflow-hidden">
+        <div class="rounded-xl overflow-hidden theme-card theme-border landing-snippet">
           <ContentRenderer
             v-if="quickstartSnippet"
             :value="quickstartSnippet"
@@ -23,56 +20,46 @@ const { data: quickstartSnippet } = await useAsyncData(
         </div>
 
         <!-- Explanation -->
-        <div class="space-y-4 md:space-y-5 text-sm md:text-base">
-          <p
-            class="text-xs font-semibold tracking-[0.3em] uppercase text-[#552583]/80"
-          >
+        <div class="space-y-4 md:space-y-5 text-sm md:text-base theme-text">
+          <p class="landing-eyebrow">
             API &amp; quick start
           </p>
-          <h2
-            class="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900"
-          >
+          <h2 class="section-title text-2xl md:text-3xl">
             A tiny API for real calendars.
           </h2>
-          <p class="text-gray-600">
+          <p class="section-subtext">
             Attach schedules to your models and let Zap answer what is available.
           </p>
           <ul
-            class="mt-2 space-y-2 text-sm text-gray-700 list-none"
+            class="mt-2 space-y-2 text-sm theme-text list-none"
           >
             <li class="flex gap-2">
-              <span
-                class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FDB927] flex-shrink-0"
-              />
+              <span class="accent-dot flex-shrink-0" />
               <p>
-                <code class="font-mono text-xs bg-gray-100 px-1.5 py-0.5 rounded">
+                <code class="inline-callout text-xs">
                   Zap::for($model)
                 </code>
                 <span>&nbsp;attaches a schedule to any model.</span>
               </p>
             </li>
             <li class="flex gap-2">
-              <span
-                class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FDB927] flex-shrink-0"
-              />
+              <span class="accent-dot flex-shrink-0" />
               <p>
-                <code class="font-mono text-xs bg-gray-100 px-1.5 py-0.5 rounded">
+                <code class="inline-callout text-xs">
                   named('Office Hours')
                 </code>
                 <span>&nbsp;labels a schedule for later queries.</span>
               </p>
             </li>
             <li class="flex gap-2">
-              <span
-                class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FDB927] flex-shrink-0"
-              />
+              <span class="accent-dot flex-shrink-0" />
               <p>
-                <code class="font-mono text-xs bg-gray-100 px-1.5 py-0.5 rounded">
+                <code class="inline-callout text-xs">
                   availability()
                 </code>
                 <span>
                   &nbsp;defines where bookings are allowed;
-                  <code class="font-mono text-xs bg-gray-100 px-1 py-0.5 rounded">
+                  <code class="inline-callout text-xs">
                     appointment()
                   </code>
                   stores the bookings.
@@ -80,18 +67,16 @@ const { data: quickstartSnippet } = await useAsyncData(
               </p>
             </li>
             <li class="flex gap-2">
-              <span
-                class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FDB927] flex-shrink-0"
-              />
+              <span class="accent-dot flex-shrink-0" />
               <p>
-                <code class="font-mono text-xs bg-gray-100 px-1.5 py-0.5 rounded">
+                <code class="inline-callout text-xs">
                   save()
                 </code>
                 <span>&nbsp;persists schedules for conflict checks and slots.</span>
               </p>
             </li>
           </ul>
-          <p class="text-xs text-gray-500">
+          <p class="text-xs theme-text-muted">
             Zap handles time logic so your app can focus on UI and routes.
           </p>
         </div>

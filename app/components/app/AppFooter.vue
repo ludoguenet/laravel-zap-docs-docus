@@ -1,16 +1,14 @@
 <template>
-  <footer class="bg-[#2b1750] text-white py-10 md:py-12">
+  <footer class="footer-shell py-10 md:py-12">
     <div class="max-w-6xl mx-auto px-6">
       <div
-        class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8"
+        class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 theme-text"
       >
         <div class="text-center md:text-left">
-          <p
-            class="text-xs font-semibold tracking-[0.3em] uppercase text-[#FDB927]"
-          >
+          <p class="landing-eyebrow text-[0.7rem]">
             Laravel Zap
           </p>
-          <p class="mt-2 text-sm text-violet-100">
+          <p class="mt-2 text-sm theme-text-muted">
             Flexible schedule management for modern Laravel applications.
           </p>
         </div>
@@ -19,7 +17,7 @@
         >
           <NuxtLink
             to="/docs/getting-started/introduction"
-            class="text-violet-100 hover:text-white transition-colors"
+            class="footer-link transition-colors"
           >
             Docs
           </NuxtLink>
@@ -27,13 +25,13 @@
             href="https://github.com/ludoguenet/laravel-zap"
             target="_blank"
             rel="noopener"
-            class="text-violet-100 hover:text-white transition-colors"
+            class="footer-link transition-colors"
           >
             GitHub
           </a>
           <a
             href="mailto:ludo@epekta.com"
-            class="text-violet-100 hover:text-white transition-colors"
+            class="footer-link transition-colors"
           >
             Contact
           </a>
@@ -41,7 +39,7 @@
       </div>
 
       <div
-        class="mt-8 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-violet-100/90"
+        class="mt-8 border-t theme-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] theme-text-muted"
       >
         <p>
           &copy; {{ new Date().getFullYear() }} Laravel Jutsu. Made with 💛 by Ludovic Guénet.

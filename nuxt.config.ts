@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     },
     
     sitemap: {
-        strictNuxtContentPaths: true,
+        // strictNuxtContentPaths is not needed for @nuxt/content v3
     },
     // Use layer-relative alias so Nuxt resolves from /app
     css: ['~/assets/css/main.css'],
