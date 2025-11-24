@@ -49,5 +49,9 @@ const { formattedDownloads, isLoading } = useZapDownloads()
     </UButton>
   </div>
 </template>
+
+    <template #body>
+      <AppHeaderBody />
+    </template>
   </UHeader>
 </template>

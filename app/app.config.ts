@@ -4,6 +4,13 @@ export default defineAppConfig({
       primary: 'amber',
       neutral: 'zinc',
     },
+    page: {
+      aside: {
+        left: {
+          wrapper: 'lg:block md:block overflow-y-auto lg:max-h-[calc(100vh-var(--ui-header-height))] lg:sticky lg:top-(--ui-header-height) py-8 lg:ps-4 lg:-ms-4 lg:pe-6.5 lg:col-span-2',
+        },
+      },
+    },
   },
   docus: {
     title: 'Laravel Zap',
@@ -17,7 +24,7 @@ export default defineAppConfig({
       repo: 'laraveljutsu/zap',
     },
     aside: {
-      level: 1,
+      level: 0,
       collapsed: false,
       exclude: [],
     },
