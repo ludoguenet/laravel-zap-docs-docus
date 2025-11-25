@@ -30,48 +30,32 @@ const { data: quickstartSnippet } = await useAsyncData(
           <p class="section-subtext">
             Attach schedules to your models and let Zap answer what is available.
           </p>
-          <ul
-            class="mt-2 space-y-3 text-sm theme-text list-none"
-          >
-            <li>
-              <p>
-                <code class="highlighted-term">
-                  Zap::for($model)
-                </code>
-                <span>&nbsp;attaches a schedule to any model.</span>
-              </p>
-            </li>
-            <li>
-              <p>
-                <code class="highlighted-term">
-                  named('Office Hours')
-                </code>
-                <span>&nbsp;labels a schedule for later queries.</span>
-              </p>
-            </li>
-            <li>
-              <p>
-                <code class="highlighted-term">
-                  availability()
-                </code>
-                <span>
-                  &nbsp;defines where bookings are allowed;
-                  <code class="highlighted-term">
-                    appointment()
-                  </code>
-                  stores the bookings.
-                </span>
-              </p>
-            </li>
-            <li>
-              <p>
-                <code class="highlighted-term">
-                  save()
-                </code>
-                <span>&nbsp;persists schedules for conflict checks and slots.</span>
-              </p>
-            </li>
-          </ul>
+          <div class="mt-4 space-y-4 text-sm theme-text">
+            <p>
+              <code>Zap::for($doctor)</code> attaches a schedule to any model.
+            </p>
+            <p>
+              <code>availability()</code> defines where bookings are allowed.
+            </p>
+            <p>
+              <code>forYear(2025)</code> sets the year for the schedule.
+            </p>
+            <p>
+              <code>addPeriod('09:00', '12:00')</code> adds time periods when bookings are available.
+            </p>
+            <p>
+              <code>weekly(['monday', 'tuesday', ...])</code> repeats the schedule weekly on specified days.
+            </p>
+            <p>
+              <code>save()</code> persists the schedule for conflict checks and slots.
+            </p>
+            <p>
+              <code>getBookableSlots()</code> retrieves available time slots for a given date.
+            </p>
+            <p>
+              <code>isBookableAt()</code> checks if a specific time is available for booking.
+            </p>
+          </div>
           <p class="text-xs theme-text-muted">
             Zap handles time logic so your app can focus on UI and routes.
           </p>

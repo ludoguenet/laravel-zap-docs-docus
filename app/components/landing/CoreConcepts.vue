@@ -65,7 +65,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
                 Add the schedulable trait
               </p>
               <p class="mt-1 text-xs theme-text-muted font-mono">
-                use Zap\\Concerns\\HasSchedules;
+                use HasSchedules
               </p>
             </div>
           </li>

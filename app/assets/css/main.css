@@ -166,56 +166,6 @@ html.dark .inline-callout {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
-.highlighted-term {
-  font-family: 'JetBrains Mono', 'Source Code Pro', ui-monospace, SFMono-Regular,
-    Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
-  font-size: 0.9em;
-  font-weight: 500;
-  color: var(--violet-600);
-  background: linear-gradient(
-    120deg,
-    color-mix(in srgb, var(--violet-500) 6%, transparent) 0%,
-    color-mix(in srgb, var(--violet-500) 4%, transparent) 100%
-  );
-  padding: 0.15rem 0.4rem;
-  border-radius: 0.375rem;
-  border: 1px solid color-mix(in srgb, var(--violet-500) 18%, transparent);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
-}
-
-html.dark .highlighted-term {
-  color: var(--violet-300);
-  background: linear-gradient(
-    120deg,
-    color-mix(in srgb, var(--violet-500) 12%, transparent) 0%,
-    color-mix(in srgb, var(--violet-500) 8%, transparent) 100%
-  );
-  border-color: color-mix(in srgb, var(--violet-500) 25%, transparent);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
-
-.highlighted-term:hover {
-  background: linear-gradient(
-    120deg,
-    color-mix(in srgb, var(--violet-500) 10%, transparent) 0%,
-    color-mix(in srgb, var(--violet-500) 7%, transparent) 100%
-  );
-  border-color: color-mix(in srgb, var(--violet-500) 25%, transparent);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-html.dark .highlighted-term:hover {
-  background: linear-gradient(
-    120deg,
-    color-mix(in srgb, var(--violet-500) 16%, transparent) 0%,
-    color-mix(in srgb, var(--violet-500) 12%, transparent) 100%
-  );
-  border-color: color-mix(in srgb, var(--violet-500) 32%, transparent);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
 /* Landing sections */
 .landing-section {
   background-color: var(--color-surface);
