@@ -52,7 +52,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
 
         <span
           v-if="!isLoading && formattedDownloads"
-          class="text-sm font-mono text-neutral-600 dark:text-neutral-300"
+          class="text-sm font-mono font-thin text-neutral-500 dark:text-neutral-400 mt-1.5 relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-violet-400 dark:before:bg-violet-500"
         >
           {{ formattedDownloads }}
         </span>
