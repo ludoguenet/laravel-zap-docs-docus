@@ -52,7 +52,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
 
         <span
           v-if="!isLoading && formattedDownloads"
-          class="mt-1.5 text-sm font-mono text-neutral-600 dark:text-neutral-300"
+          class="text-sm font-mono text-neutral-600 dark:text-neutral-300"
         >
           {{ formattedDownloads }}
         </span>
@@ -64,8 +64,41 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           color="neutral"
           variant="ghost"
           class="inline-flex items-center gap-1.5"
+          aria-label="GitHub"
         >
           <UIcon name="i-simple-icons-github" class="w-5 h-5" />
+        </UButton>
+
+        <UButton
+          to="https://x.com/LudovicGuenet"
+          target="_blank"
+          rel="noopener"
+          color="neutral"
+          variant="ghost"
+          class="inline-flex items-center gap-1.5"
+          aria-label="X (Twitter)"
+        >
+          <UIcon name="i-simple-icons-x" class="w-5 h-5" />
+        </UButton>
+
+        <UButton
+          to="mailto:ludo@epekta.com"
+          color="neutral"
+          variant="ghost"
+          class="inline-flex items-center gap-1.5"
+          aria-label="Contact"
+        >
+          <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
+        </UButton>
+
+        <UButton
+          to="/docs/getting-started/introduction"
+          color="primary"
+          variant="soft"
+          class="inline-flex items-center gap-1.5"
+          aria-label="Documentation"
+        >
+          <span class="text-sm font-medium">Documentation</span>
         </UButton>
       </div>
     </template>

@@ -30,34 +30,11 @@ const { data: quickstartSnippet } = await useAsyncData(
           <p class="section-subtext">
             Attach schedules to your models and let Zap answer what is available.
           </p>
-          <div class="mt-4 space-y-4 text-sm theme-text">
-            <p>
-              <code>Zap::for($doctor)</code> attaches a schedule to any model.
-            </p>
-            <p>
-              <code>availability()</code> defines where bookings are allowed.
-            </p>
-            <p>
-              <code>forYear(2025)</code> sets the year for the schedule.
-            </p>
-            <p>
-              <code>addPeriod('09:00', '12:00')</code> adds time periods when bookings are available.
-            </p>
-            <p>
-              <code>weekly(['monday', 'tuesday', ...])</code> repeats the schedule weekly on specified days.
-            </p>
-            <p>
-              <code>save()</code> persists the schedule for conflict checks and slots.
-            </p>
-            <p>
-              <code>getBookableSlots()</code> retrieves available time slots for a given date.
-            </p>
-            <p>
-              <code>isBookableAt()</code> checks if a specific time is available for booking.
-            </p>
-          </div>
-          <p class="text-xs theme-text-muted">
-            Zap handles time logic so your app can focus on UI and routes.
+          <p class="leading-relaxed text-sm md:text-base theme-text theme-text-muted">
+            Zap provides a <strong>simple, fluent API</strong> to <strong>attach schedules to any model</strong> in your application. You can define <strong>availability periods</strong>, set <strong>recurring weekly patterns</strong>, and <strong>query available time slots</strong> with just a few method calls.
+          </p>
+          <p class="leading-relaxed text-sm md:text-base theme-text theme-text-muted">
+            Zap handles all the <strong>complex time logic</strong> behind the scenes, so you can focus on <strong>building your UI and routes</strong>.
           </p>
         </div>
       </div>
