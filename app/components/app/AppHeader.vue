@@ -36,7 +36,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
     </template>
 
     <template #right>
-      <div class="inline-flex items-center gap-2">
+      <div class="inline-flex items-center gap-1 lg:gap-2">
         <UButton
           color="neutral"
           variant="ghost"
@@ -52,7 +52,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
 
         <span
           v-if="!isLoading && formattedDownloads"
-          class="text-sm font-mono font-thin text-neutral-500 dark:text-neutral-400 mt-1.5 relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-violet-400 dark:before:bg-violet-500"
+          class="hidden lg:inline-block text-sm font-mono font-thin text-neutral-500 dark:text-neutral-400 mt-1.5 relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-violet-400 dark:before:bg-violet-500"
         >
           {{ formattedDownloads }}
         </span>
@@ -69,13 +69,14 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           <UIcon name="i-simple-icons-github" class="w-5 h-5" />
         </UButton>
 
+        <!-- Hidden on mobile/tablet, shown on desktop -->
         <UButton
           to="https://x.com/LudovicGuenet"
           target="_blank"
           rel="noopener"
           color="neutral"
           variant="ghost"
-          class="inline-flex items-center gap-1.5"
+          class="hidden lg:inline-flex items-center gap-1.5"
           aria-label="X (Twitter)"
         >
           <UIcon name="i-simple-icons-x" class="w-5 h-5" />
@@ -85,7 +86,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           to="mailto:ludo@epekta.com"
           color="neutral"
           variant="ghost"
-          class="inline-flex items-center gap-1.5"
+          class="hidden lg:inline-flex items-center gap-1.5"
           aria-label="Contact"
         >
           <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
@@ -98,7 +99,8 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           class="inline-flex items-center gap-1.5"
           aria-label="Documentation"
         >
-          <span class="text-sm font-medium">Documentation</span>
+          <span class="hidden sm:inline text-sm font-medium">Documentation</span>
+          <span class="sm:hidden text-sm font-medium">Docs</span>
         </UButton>
       </div>
     </template>
