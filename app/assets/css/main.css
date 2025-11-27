@@ -156,14 +156,14 @@ html.dark .text-muted {
     #fbf7ff
   );
   border: 1px solid color-mix(in srgb, var(--violet-500) 35%, #ede9fe);
-  box-shadow: 0 8px 22px rgba(98, 0, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(98, 0, 255, 0.04);
 }
 
 html.dark .inline-callout {
   color: #f7f2ff;
   background: color-mix(in srgb, var(--violet-600) 30%, rgba(11, 6, 18, 0.8));
   border-color: color-mix(in srgb, var(--violet-500) 55%, transparent);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Landing sections */
@@ -386,7 +386,7 @@ html.dark .hero-gradient-orb--3 {
 .cta-primary {
   color: #f8f5ff;
   background: linear-gradient(120deg, var(--violet-600), #5b21b6);
-  box-shadow: 0 15px 35px color-mix(in srgb, var(--violet-600) 40%, transparent);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--violet-600) 25%, transparent);
   border: 1px solid color-mix(in srgb, var(--violet-600) 20%, transparent);
 }
 
@@ -445,7 +445,7 @@ html.dark .stat-chip {
   background-color: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: 1rem;
-  box-shadow: 0 25px 50px rgba(10, 10, 15, 0.22);
+  box-shadow: 0 4px 12px rgba(10, 10, 15, 0.08);
   color: var(--color-text);
 }
 
@@ -478,7 +478,7 @@ html.dark .stat-chip {
   background: var(--violet-600);
   color: #fff;
   font-weight: 600;
-  box-shadow: 0 15px 30px color-mix(in srgb, var(--violet-600) 50%, transparent);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--violet-600) 30%, transparent);
 }
 
 .label-secondary {
@@ -1167,8 +1167,8 @@ html.dark .calendar-glow--secondary {
   border: 1px solid var(--color-border);
   border-radius: 1.25rem;
   box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.08),
-    0 4px 16px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    0 2px 6px rgba(0, 0, 0, 0.02),
     0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   transition: transform 0.1s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -1181,8 +1181,8 @@ html.dark .calendar-glow--secondary {
 
 html.dark .calendar-card {
   box-shadow: 
-    0 16px 48px rgba(0, 0, 0, 0.4),
-    0 6px 20px rgba(0, 0, 0, 0.2),
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.1),
     0 0 0 1px rgba(255, 255, 255, 0.03) inset;
 }
 
@@ -1202,7 +1202,7 @@ html.dark .calendar-card {
 
 .calendar-icon-wrapper:hover {
   transform: translateZ(0) scale(1.04);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .calendar-icon-wrapper:active {
@@ -1353,7 +1353,7 @@ html.dark .calendar-card {
   border: 1px solid color-mix(in srgb, var(--violet-500) 40%, transparent);
   color: var(--violet-600);
   box-shadow: 
-    0 2px 8px color-mix(in srgb, var(--violet-600) 20%, transparent),
+    0 1px 4px color-mix(in srgb, var(--violet-600) 12%, transparent),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
@@ -1366,7 +1366,7 @@ html.dark .calendar-event__time--primary {
   );
   border-color: color-mix(in srgb, var(--violet-500) 55%, transparent);
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
@@ -1379,7 +1379,7 @@ html.dark .calendar-event__time--primary {
   border: 1px solid color-mix(in srgb, var(--orange-400) 35%, transparent);
   color: var(--orange-600);
   box-shadow: 
-    0 2px 8px color-mix(in srgb, var(--orange-400) 18%, transparent),
+    0 1px 4px color-mix(in srgb, var(--orange-400) 12%, transparent),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
@@ -1392,7 +1392,7 @@ html.dark .calendar-event__time--secondary {
   );
   border-color: color-mix(in srgb, var(--orange-400) 50%, transparent);
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
@@ -1408,7 +1408,7 @@ html.dark .calendar-event__time--secondary {
 
 .calendar-event:hover .calendar-event__body {
   box-shadow: 
-    0 3px 12px color-mix(in srgb, var(--violet-600) 18%, transparent),
+    0 2px 6px color-mix(in srgb, var(--violet-600) 12%, transparent),
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
@@ -1420,7 +1420,7 @@ html.dark .calendar-event__time--secondary {
     color-mix(in srgb, var(--violet-500) 5%, transparent)
   );
   box-shadow: 
-    0 1px 6px color-mix(in srgb, var(--violet-600) 12%, transparent),
+    0 1px 3px color-mix(in srgb, var(--violet-600) 8%, transparent),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
@@ -1432,7 +1432,7 @@ html.dark .calendar-event__body--primary {
   );
   border-color: color-mix(in srgb, var(--violet-500) 35%, transparent);
   box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.25),
+    0 2px 6px rgba(0, 0, 0, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
@@ -1444,7 +1444,7 @@ html.dark .calendar-event__body--primary {
     color-mix(in srgb, var(--color-border) 12%, transparent)
   );
   box-shadow: 
-    0 1px 6px rgba(0, 0, 0, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.02),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
@@ -1456,7 +1456,7 @@ html.dark .calendar-event__body--secondary {
   );
   border-color: var(--color-border);
   box-shadow: 
-    0 3px 10px rgba(0, 0, 0, 0.25),
+    0 2px 6px rgba(0, 0, 0, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
