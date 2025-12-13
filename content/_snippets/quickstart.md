@@ -13,6 +13,6 @@ Zap::for($doctor)
 // Get bookable slots
 $slots = $doctor->getBookableSlots('2025-01-15', 60, 15);
 
-// Check if a specific time is bookable
-$isAvailable = $doctor->isBookableAt('2025-01-15', '15:00', 60);
+// Check if a specific time range is bookable
+$isAvailable = $doctor->isBookableAtTime('2025-01-15', '15:00', '16:00');
 ```
