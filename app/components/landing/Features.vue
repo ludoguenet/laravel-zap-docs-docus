@@ -5,19 +5,19 @@
         <p class="landing-eyebrow">
           Built for real scheduling problems
         </p>
-        <h2 class="mt-3 section-title text-2xl md:text-3xl">
+        <h2 class="mt-4 section-title text-2xl md:text-3xl">
           A single engine for availabilities, conflicts and time slots.
         </h2>
-        <p class="mt-3 text-sm md:text-base section-subtext">
+        <p class="mt-4 text-sm md:text-base section-subtext">
           Zap keeps scheduling rules in one place so your app stays predictable.
         </p>
       </header>
 
       <!-- Feature grid -->
       <div
-        class="mt-10 grid gap-6 md:gap-8 md:grid-cols-3 text-sm md:text-base"
+        class="mt-12 grid gap-6 md:gap-8 md:grid-cols-3 text-sm md:text-base"
       >
-        <article class="feature-card p-6 flex flex-col gap-3">
+        <article class="feature-card p-6 flex flex-col gap-4">
           <div class="flex items-center gap-3">
             <span class="icon-chip">
               <UIcon name="i-heroicons-calendar-days" class="w-5 h-5" />
@@ -32,7 +32,7 @@
           </p>
         </article>
 
-        <article class="feature-card p-6 flex flex-col gap-3">
+        <article class="feature-card p-6 flex flex-col gap-4">
           <div class="flex items-center gap-3">
             <span class="icon-chip">
               <UIcon name="i-heroicons-adjustments-horizontal" class="w-5 h-5" />
@@ -47,7 +47,7 @@
           </p>
         </article>
 
-        <article class="feature-card p-6 flex flex-col gap-3">
+        <article class="feature-card p-6 flex flex-col gap-4">
           <div class="flex items-center gap-3">
             <span class="icon-chip">
               <UIcon name="i-heroicons-clock" class="w-5 h-5" />

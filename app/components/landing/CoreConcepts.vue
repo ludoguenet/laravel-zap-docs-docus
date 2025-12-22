@@ -11,16 +11,16 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
         <p class="landing-eyebrow">
           Install in seconds
         </p>
-        <h2 class="mt-3 text-2xl md:text-3xl section-title">
+        <h2 class="mt-4 text-2xl md:text-3xl section-title">
           From composer install to bookable slots in three steps.
         </h2>
-        <p class="mt-3 text-sm md:text-base section-subtext">
+        <p class="mt-4 text-sm md:text-base section-subtext">
           Zap is a focused calendar engine for schedules on your existing models.
         </p>
       </div>
 
       <div
-        class="mt-10 grid gap-10 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start"
+        class="mt-12 grid gap-8 md:gap-12 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start"
       >
         <!-- Three step mini-guide -->
         <ol class="space-y-6 text-sm theme-text">
@@ -34,7 +34,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
               <p class="font-semibold theme-text">
                 Publish migrations
               </p>
-              <p class="mt-1 text-xs theme-text-muted font-mono">
+              <p class="mt-2 text-xs theme-text-muted font-mono">
                 php artisan vendor:publish --tag="zap-migrations"
               </p>
             </div>
@@ -49,7 +49,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
               <p class="font-semibold theme-text">
                 Run the migrations
               </p>
-              <p class="mt-1 text-xs theme-text-muted font-mono">
+              <p class="mt-2 text-xs theme-text-muted font-mono">
                 php artisan migrate
               </p>
             </div>
@@ -64,7 +64,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
               <p class="font-semibold theme-text">
                 Add the schedulable trait
               </p>
-              <p class="mt-1 text-xs theme-text-muted font-mono">
+              <p class="mt-2 text-xs theme-text-muted font-mono">
                 use HasSchedules
               </p>
             </div>

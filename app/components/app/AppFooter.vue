@@ -2,7 +2,7 @@
   <footer class="footer-shell py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-6">
       <!-- Two column layout: Content left, Logo right -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-10 md:mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-12">
         <!-- Left: Logo, text and links -->
         <div>
           <!-- Logo and tagline -->
@@ -142,7 +142,7 @@
       </div>
 
       <!-- Bottom copyright -->
-      <div class="border-t theme-border pt-6">
+      <div class="border-t theme-border pt-8">
         <p class="text-xs theme-text-muted text-center">
           &copy; Laravel Zap {{ new Date().getFullYear() }}. All rights reserved. Powered by Nuxt.
         </p>

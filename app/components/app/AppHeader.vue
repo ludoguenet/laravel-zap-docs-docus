@@ -17,8 +17,25 @@ const githubUrl = computed(() => {
 const colorMode = useColorMode()
 
 const toggleColorMode = () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  // Cycle through: system → light → dark → system
+  if (colorMode.preference === 'system') {
+    colorMode.preference = 'light'
+  } else if (colorMode.preference === 'light') {
+    colorMode.preference = 'dark'
+  } else {
+    colorMode.preference = 'system'
+  }
 }
+
+const colorModeIcon = computed(() => {
+  if (colorMode.preference === 'system') {
+    return 'i-heroicons-computer-desktop'
+  } else if (colorMode.preference === 'light') {
+    return 'i-heroicons-sun'
+  } else {
+    return 'i-heroicons-moon'
+  }
+})
 
 const { formattedDownloads, isLoading } = useZapDownloads()
 </script>
@@ -36,23 +53,23 @@ const { formattedDownloads, isLoading } = useZapDownloads()
     </template>
 
     <template #right>
-      <div class="inline-flex items-center gap-1 lg:gap-2">
+      <div class="inline-flex items-center gap-2">
         <UButton
           color="neutral"
           variant="ghost"
           class="inline-flex items-center justify-center rounded-full"
-          aria-label="Toggle color mode"
+          :aria-label="`Color mode: ${colorMode.preference}`"
           @click="toggleColorMode"
         >
           <UIcon
-            :name="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'"
+            :name="colorModeIcon"
             class="w-5 h-5"
           />
         </UButton>
 
         <span
           v-if="!isLoading && formattedDownloads"
-          class="hidden lg:inline-block text-sm font-mono font-thin text-neutral-500 dark:text-neutral-400 mt-1.5 relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-violet-400 dark:before:bg-violet-500"
+          class="hidden lg:inline-block text-sm font-mono font-thin text-neutral-500 dark:text-neutral-400 relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-violet-400 dark:before:bg-violet-500"
         >
           {{ formattedDownloads }}
         </span>
@@ -63,7 +80,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           rel="noopener"
           color="neutral"
           variant="ghost"
-          class="inline-flex items-center gap-1.5"
+          class="inline-flex items-center gap-2"
           aria-label="GitHub"
         >
           <UIcon name="i-simple-icons-github" class="w-5 h-5" />
@@ -76,7 +93,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           rel="noopener"
           color="neutral"
           variant="ghost"
-          class="hidden lg:inline-flex items-center gap-1.5"
+          class="hidden lg:inline-flex items-center gap-2"
           aria-label="X (Twitter)"
         >
           <UIcon name="i-simple-icons-x" class="w-5 h-5" />
@@ -86,7 +103,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           to="mailto:ludo@epekta.com"
           color="neutral"
           variant="ghost"
-          class="hidden lg:inline-flex items-center gap-1.5"
+          class="hidden lg:inline-flex items-center gap-2"
           aria-label="Contact"
         >
           <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
@@ -96,7 +113,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           to="/docs/getting-started/introduction"
           color="primary"
           variant="soft"
-          class="inline-flex items-center gap-1.5"
+          class="inline-flex items-center gap-2"
           aria-label="Documentation"
         >
           <span class="hidden sm:inline text-sm font-medium">Documentation</span>

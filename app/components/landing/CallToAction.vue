@@ -9,7 +9,7 @@ const { data: quickstartSnippet } = await useAsyncData(
   <section id="api" class="landing-section landing-section--divider py-16 md:py-20">
     <div class="max-w-6xl mx-auto px-6">
       <div
-        class="grid gap-10 md:gap-12 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start"
+        class="grid gap-8 md:gap-12 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start"
       >
         <!-- Quick start snippet rendered via @nuxt/content (Docus) -->
         <div class="rounded-xl overflow-hidden theme-card theme-border landing-snippet">
@@ -20,7 +20,7 @@ const { data: quickstartSnippet } = await useAsyncData(
         </div>
 
         <!-- Explanation -->
-        <div class="space-y-4 md:space-y-5 text-sm md:text-base theme-text">
+        <div class="space-y-4 text-sm md:text-base theme-text">
           <p class="landing-eyebrow">
             API &amp; quick start
           </p>
