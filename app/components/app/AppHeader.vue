@@ -57,22 +57,23 @@ const { formattedDownloads, isLoading } = useZapDownloads()
         <UButton
           color="neutral"
           variant="ghost"
-          class="inline-flex items-center justify-center rounded-full"
+          class="header-icon-button inline-flex items-center justify-center"
           :aria-label="`Color mode: ${colorMode.preference}`"
           @click="toggleColorMode"
         >
           <UIcon
             :name="colorModeIcon"
-            class="w-5 h-5"
+            class="w-4 h-4"
           />
         </UButton>
 
-        <span
+        <div
           v-if="!isLoading && formattedDownloads"
-          class="hidden lg:inline-block text-sm font-mono font-thin text-neutral-500 dark:text-neutral-400 relative pl-3 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-violet-400 dark:before:bg-violet-500"
+          class="header-downloads hidden lg:flex items-center gap-1.5 px-2 py-1 rounded-md bg-white/10 backdrop-blur-sm border border-white/20"
         >
-          {{ formattedDownloads }}
-        </span>
+          <UIcon name="i-heroicons-arrow-down-tray" class="w-3.5 h-3.5" />
+          <span class="text-xs font-medium">{{ formattedDownloads }}</span>
+        </div>
 
         <UButton
           :to="githubUrl"
@@ -80,10 +81,10 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           rel="noopener"
           color="neutral"
           variant="ghost"
-          class="inline-flex items-center gap-2"
+          class="header-icon-button inline-flex items-center gap-2"
           aria-label="GitHub"
         >
-          <UIcon name="i-simple-icons-github" class="w-5 h-5" />
+          <UIcon name="i-simple-icons-github" class="w-4 h-4" />
         </UButton>
 
         <!-- Hidden on mobile/tablet, shown on desktop -->
@@ -93,27 +94,27 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           rel="noopener"
           color="neutral"
           variant="ghost"
-          class="hidden lg:inline-flex items-center gap-2"
+          class="header-icon-button hidden lg:inline-flex items-center gap-2"
           aria-label="X (Twitter)"
         >
-          <UIcon name="i-simple-icons-x" class="w-5 h-5" />
+          <UIcon name="i-simple-icons-x" class="w-4 h-4" />
         </UButton>
 
         <UButton
           to="mailto:ludo@epekta.com"
           color="neutral"
           variant="ghost"
-          class="hidden lg:inline-flex items-center gap-2"
+          class="header-icon-button hidden lg:inline-flex items-center gap-2"
           aria-label="Contact"
         >
-          <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
+          <UIcon name="i-heroicons-envelope" class="w-4 h-4" />
         </UButton>
 
         <UButton
           to="/docs/getting-started/introduction"
           color="primary"
-          variant="soft"
-          class="inline-flex items-center gap-2"
+          variant="solid"
+          class="header-docs-button inline-flex items-center gap-2"
           aria-label="Documentation"
         >
           <span class="hidden sm:inline text-sm font-medium">Documentation</span>
