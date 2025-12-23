@@ -12,7 +12,7 @@ const { data: quickstartSnippet } = await useAsyncData(
         class="grid gap-8 md:gap-12 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start"
       >
         <!-- Quick start snippet rendered via @nuxt/content (Docus) -->
-        <div class="rounded-xl overflow-hidden theme-card theme-border landing-snippet">
+        <div class="rounded-xl overflow-hidden">
           <ContentRenderer
             v-if="quickstartSnippet"
             :value="quickstartSnippet"

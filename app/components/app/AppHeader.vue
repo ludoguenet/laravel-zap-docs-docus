@@ -69,10 +69,10 @@ const { formattedDownloads, isLoading } = useZapDownloads()
 
         <div
           v-if="!isLoading && formattedDownloads"
-          class="header-downloads hidden lg:flex items-center gap-1.5 px-2 py-1 rounded-md bg-white/10 backdrop-blur-sm border border-white/20"
+          class="header-downloads hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-gray-200/80 dark:border-gray-800/80 bg-white/70 dark:bg-white/5 text-xs font-medium"
         >
-          <UIcon name="i-heroicons-arrow-down-tray" class="w-3.5 h-3.5" />
-          <span class="text-xs font-medium">{{ formattedDownloads }}</span>
+          <UIcon name="i-heroicons-arrow-down-tray" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+          <span>{{ formattedDownloads }}</span>
         </div>
 
         <UButton

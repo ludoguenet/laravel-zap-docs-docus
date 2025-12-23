@@ -72,7 +72,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
         </ol>
 
         <!-- Install snippet rendered via @nuxt/content (Docus) -->
-        <div class="rounded-xl overflow-hidden theme-card theme-border landing-snippet">
+        <div class="rounded-xl overflow-hidden">
           <ContentRenderer
             v-if="installSnippet"
             :value="installSnippet"
