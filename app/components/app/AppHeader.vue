@@ -54,19 +54,6 @@ const { formattedDownloads, isLoading } = useZapDownloads()
 
     <template #right>
       <div class="inline-flex items-center gap-2">
-        <UButton
-          color="neutral"
-          variant="ghost"
-          class="header-icon-button inline-flex items-center justify-center"
-          :aria-label="`Color mode: ${colorMode.preference}`"
-          @click="toggleColorMode"
-        >
-          <UIcon
-            :name="colorModeIcon"
-            class="w-4 h-4"
-          />
-        </UButton>
-
         <div
           v-if="!isLoading && formattedDownloads"
           class="header-downloads hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-gray-200/80 dark:border-gray-800/80 bg-white/70 dark:bg-white/5 text-xs font-medium"
@@ -101,24 +88,16 @@ const { formattedDownloads, isLoading } = useZapDownloads()
         </UButton>
 
         <UButton
-          to="mailto:ludo@epekta.com"
           color="neutral"
           variant="ghost"
-          class="header-icon-button hidden lg:inline-flex items-center gap-2"
-          aria-label="Contact"
+          class="header-icon-button inline-flex items-center justify-center"
+          :aria-label="`Color mode: ${colorMode.preference}`"
+          @click="toggleColorMode"
         >
-          <UIcon name="i-heroicons-envelope" class="w-4 h-4" />
-        </UButton>
-
-        <UButton
-          to="/docs/getting-started/introduction"
-          color="primary"
-          variant="solid"
-          class="header-docs-button inline-flex items-center gap-2"
-          aria-label="Documentation"
-        >
-          <span class="hidden sm:inline text-sm font-medium">Documentation</span>
-          <span class="sm:hidden text-sm font-medium">Docs</span>
+          <UIcon
+            :name="colorModeIcon"
+            class="w-4 h-4"
+          />
         </UButton>
       </div>
     </template>

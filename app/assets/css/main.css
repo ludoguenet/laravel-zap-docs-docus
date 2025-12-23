@@ -100,25 +100,38 @@ html.dark .nui-header {
 }
 
 .header-docs-button {
-  border-radius: 0.6rem;
-  font-weight: 600;
-  transition: background-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.6rem 1.2rem;
-  background: var(--amber-500);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
   color: #1f1f1f;
-  border: 1px solid color-mix(in srgb, var(--amber-500) 75%, transparent);
-  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+  background-color: var(--amber-500);
+  border: 2px solid #000;
+  border-radius: 0.625rem;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .header-docs-button:hover {
-  background: var(--amber-400);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 34px rgba(245, 158, 11, 0.22);
+  background-color: #fff;
+  color: var(--amber-500);
+  border-color: var(--amber-500);
+  box-shadow: 5px 5px 0px var(--amber-500);
+}
+
+.header-docs-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translate(5px, 5px);
 }
 
 html.dark .header-docs-button {
   color: #0b1220;
-  box-shadow: 0 12px 34px rgba(245, 158, 11, 0.28);
 }
 
 .header-downloads {
@@ -238,38 +251,79 @@ html.dark .hero-gradient-bg {
 
 .cta-primary,
 .cta-secondary {
-  border-radius: 0.65rem;
-  padding: 0.85rem 1.4rem;
-  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background-color 120ms ease, box-shadow 120ms ease, transform 120ms ease, border-color 120ms ease;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 0.625rem;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .cta-primary {
   color: #1f1f1f;
-  background: var(--amber-500);
-  border: 1px solid color-mix(in srgb, var(--amber-500) 70%, transparent);
-  box-shadow: 0 10px 28px rgba(245, 158, 11, 0.18);
+  background-color: var(--amber-500);
+  border-color: #000;
+  box-shadow: 5px 5px 0px #000;
+}
+
+html.dark .cta-primary {
+  color: #0b1220;
 }
 
 .cta-primary:hover {
-  background: var(--amber-400);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.22);
+  background-color: #fff;
+  color: var(--amber-500);
+  border-color: var(--amber-500);
+  box-shadow: 5px 5px 0px var(--amber-500);
+}
+
+html.dark .cta-primary:hover {
+  color: var(--amber-500);
+}
+
+.cta-primary:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translate(5px, 5px);
 }
 
 .cta-secondary {
-  border: 1px solid var(--color-border);
   color: var(--color-text);
   background-color: var(--color-card);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+  border-color: #000;
+  box-shadow: 5px 5px 0px #000;
+}
+
+html.dark .cta-secondary {
+  border-color: #fff;
+  box-shadow: 5px 5px 0px #fff;
 }
 
 .cta-secondary:hover {
-  border-color: var(--color-border-strong);
-  background-color: var(--color-surface);
+  background-color: #fff;
+  color: var(--amber-500);
+  border-color: var(--amber-500);
+  box-shadow: 5px 5px 0px var(--amber-500);
+}
+
+html.dark .cta-secondary:hover {
+  background-color: var(--color-card);
+  color: var(--amber-500);
+  border-color: var(--amber-500);
+  box-shadow: 5px 5px 0px var(--amber-500);
+}
+
+.cta-secondary:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translate(5px, 5px);
 }
 
 .stat-chip {

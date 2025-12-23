@@ -15,67 +15,73 @@
 
       <div class="mt-12 grid gap-6 md:gap-8 md:grid-cols-3 text-sm">
         <!-- Doctor appointments -->
-        <article class="example-card p-6 flex flex-col gap-4">
-          <div class="flex items-center gap-3">
-            <span class="icon-chip">
-              <UIcon name="i-heroicons-heart" class="w-5 h-5" />
-            </span>
-            <div>
-              <p class="label-secondary">
-                Doctor appointments
-              </p>
-              <h3 class="text-sm font-semibold theme-text">
-                Clinic &amp; telehealth booking
-              </h3>
+        <ShinyCard>
+          <article class="p-6 flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <span class="icon-chip">
+                <UIcon name="i-heroicons-heart" class="w-5 h-5" />
+              </span>
+              <div>
+                <p class="label-secondary">
+                  Doctor appointments
+                </p>
+                <h3 class="text-sm font-semibold theme-text">
+                  Clinic &amp; telehealth booking
+                </h3>
+              </div>
             </div>
-          </div>
-          <p class="theme-text-muted">
-            Model office hours and blocked days so Zap returns only bookable slots.
-          </p>
-        </article>
+            <p class="theme-text-muted">
+              Model office hours and blocked days so Zap returns only bookable slots.
+            </p>
+          </article>
+        </ShinyCard>
 
         <!-- Meeting rooms -->
-        <article class="example-card p-6 flex flex-col gap-4">
-          <div class="flex items-center gap-3">
-            <span class="icon-chip">
-              <UIcon
-                name="i-heroicons-building-office-2"
-                class="w-5 h-5"
-              />
-            </span>
-            <div>
-              <p class="label-secondary">
-                Meeting rooms
-              </p>
-              <h3 class="text-sm font-semibold theme-text">
-                Rooms, pods &amp; shared spaces
-              </h3>
+        <ShinyCard>
+          <article class="p-6 flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <span class="icon-chip">
+                <UIcon
+                  name="i-heroicons-building-office-2"
+                  class="w-5 h-5"
+                />
+              </span>
+              <div>
+                <p class="label-secondary">
+                  Meeting rooms
+                </p>
+                <h3 class="text-sm font-semibold theme-text">
+                  Rooms, pods &amp; shared spaces
+                </h3>
+              </div>
             </div>
-          </div>
-          <p class="theme-text-muted">
-            Keep meeting rooms and shared spaces conflict‑free by design.
-          </p>
-        </article>
+            <p class="theme-text-muted">
+              Keep meeting rooms and shared spaces conflict‑free by design.
+            </p>
+          </article>
+        </ShinyCard>
 
         <!-- Shift management -->
-        <article class="example-card p-6 flex flex-col gap-4">
-          <div class="flex items-center gap-3">
-            <span class="icon-chip">
-              <UIcon name="i-heroicons-users" class="w-5 h-5" />
-            </span>
-            <div>
-              <p class="label-secondary">
-                Shift management
-              </p>
-              <h3 class="text-sm font-semibold theme-text">
-                Teams, call rotations &amp; support
-              </h3>
+        <ShinyCard>
+          <article class="p-6 flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <span class="icon-chip">
+                <UIcon name="i-heroicons-users" class="w-5 h-5" />
+              </span>
+              <div>
+                <p class="label-secondary">
+                  Shift management
+                </p>
+                <h3 class="text-sm font-semibold theme-text">
+                  Teams, call rotations &amp; support
+                </h3>
+              </div>
             </div>
-          </div>
-          <p class="theme-text-muted">
-            Describe shifts and time off once, then query who is available.
-          </p>
-        </article>
+            <p class="theme-text-muted">
+              Describe shifts and time off once, then query who is available.
+            </p>
+          </article>
+        </ShinyCard>
       </div>
     </div>
   </section>
