@@ -32,12 +32,16 @@
         <div
           class="flex flex-wrap items-center justify-center min-[911px]:justify-start gap-4"
         >
-          <a href="#install" class="cta-primary" aria-label="Get started with Laravel Zap">
+          <a
+            href="#install"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-base font-bold text-center no-underline border-2 border-black dark:border-white rounded-[0.625rem] shadow-[5px_5px_0px_#000] dark:shadow-[5px_5px_0px_#fff] bg-amber-500 text-[#1f1f1f] dark:text-[#0b1220] transition-all duration-300 cursor-pointer hover:bg-white hover:text-amber-500 hover:border-amber-500 hover:shadow-[5px_5px_0px_#f59e0b] active:bg-amber-300 active:text-red-600 active:shadow-none active:translate-x-[5px] active:translate-y-[5px]"
+            aria-label="Get started with Laravel Zap"
+          >
             Get Started
           </a>
           <a
             href="/docs/getting-started/introduction"
-            class="cta-secondary"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-base font-bold text-center no-underline border-2 border-black dark:border-white rounded-[0.625rem] shadow-[5px_5px_0px_#000] dark:shadow-[5px_5px_0px_#fff] bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-200 transition-all duration-300 cursor-pointer hover:bg-white hover:text-amber-500 hover:border-amber-500 hover:shadow-[5px_5px_0px_#f59e0b] dark:hover:bg-slate-900 active:bg-amber-300 active:text-red-600 active:shadow-none active:translate-x-[5px] active:translate-y-[5px]"
             aria-label="View Laravel Zap documentation"
           >
             View Docs
