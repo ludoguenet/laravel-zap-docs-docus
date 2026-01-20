@@ -17,8 +17,8 @@
           <p class="text-sm theme-text-muted leading-relaxed">
             Build predictable schedules with minimal fuss. Zap stays out of your way while keeping your calendar logic reliable.
           </p>
-          <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full border theme-border bg-white/70 dark:bg-white/5 text-sm font-medium">
-            <span class="h-2 w-2 rounded-full bg-amber-500" />
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border theme-border bg-white/80 dark:bg-white/5 backdrop-blur-sm text-xs font-medium theme-text-muted">
+            <span class="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
             <span>Production-ready & actively maintained</span>
           </div>
         </div>
@@ -131,7 +131,7 @@
       </div>
 
       <div class="border-t theme-border pt-8">
-        <p class="text-xs theme-text-muted text-center">
+        <p class="text-xs theme-text-muted text-center leading-relaxed">
           &copy; Laravel Zap {{ new Date().getFullYear() }}. All rights reserved. Powered by Nuxt.
         </p>
       </div>

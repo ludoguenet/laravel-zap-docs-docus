@@ -30,18 +30,18 @@
 
         <!-- CTAs -->
         <div
-          class="flex flex-wrap items-center justify-center min-[911px]:justify-start gap-4"
+          class="flex flex-wrap items-center justify-center min-[911px]:justify-start gap-3"
         >
           <a
             href="#install"
-            class="inline-flex items-center gap-2 px-5 py-2.5 text-base font-bold text-center no-underline border-2 border-black dark:border-white rounded-[0.625rem] shadow-[5px_5px_0px_#000] dark:shadow-[5px_5px_0px_#fff] bg-amber-500 text-[#1f1f1f] dark:text-[#0b1220] transition-all duration-300 cursor-pointer hover:bg-white hover:text-amber-500 hover:border-amber-500 hover:shadow-[5px_5px_0px_#f59e0b] active:bg-amber-300 active:text-red-600 active:shadow-none active:translate-x-[5px] active:translate-y-[5px]"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-base font-bold text-center no-underline border-2 border-black dark:border-white rounded-lg shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] bg-amber-500 text-[#09090b] dark:text-[#09090b] transition-all duration-200 cursor-pointer hover:bg-white hover:text-amber-500 hover:border-amber-500 hover:shadow-[4px_4px_0px_#f59e0b] dark:hover:bg-white dark:hover:text-amber-500 active:shadow-none active:translate-x-[4px] active:translate-y-[4px]"
             aria-label="Get started with Laravel Zap"
           >
             Get Started
           </a>
           <a
             href="/docs/getting-started/introduction"
-            class="inline-flex items-center gap-2 px-5 py-2.5 text-base font-bold text-center no-underline border-2 border-black dark:border-white rounded-[0.625rem] shadow-[5px_5px_0px_#000] dark:shadow-[5px_5px_0px_#fff] bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-200 transition-all duration-300 cursor-pointer hover:bg-white hover:text-amber-500 hover:border-amber-500 hover:shadow-[5px_5px_0px_#f59e0b] dark:hover:bg-slate-900 active:bg-amber-300 active:text-red-600 active:shadow-none active:translate-x-[5px] active:translate-y-[5px]"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-base font-semibold text-center no-underline border border-black/10 dark:border-white/10 rounded-lg bg-white/80 dark:bg-white/5 backdrop-blur-sm text-gray-900 dark:text-gray-200 transition-all duration-200 cursor-pointer hover:bg-white hover:border-black/20 dark:hover:bg-white/10 dark:hover:border-white/20 hover:shadow-sm active:shadow-none active:translate-y-[1px]"
             aria-label="View Laravel Zap documentation"
           >
             View Docs
