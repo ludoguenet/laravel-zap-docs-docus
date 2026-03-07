@@ -8,9 +8,10 @@ interface ZapDownloadsResponse {
 }
 
 export function useZapDownloads() {
+  // Client-only fetch so the count is fresh on each visit (no need to rebuild to update)
   const { data, pending } = useFetch<ZapDownloadsResponse>('/api/zap-downloads', {
-    server: true,
-    lazy: false,
+    server: false,
+    lazy: true,
     key: 'zap-downloads',
   })
 

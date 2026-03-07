@@ -13,7 +13,10 @@ interface PackagistResponse {
   }
 }
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event) => {
+  // Allow CDN/browser to cache for 1 hour so we don't hit Packagist on every request
+  setHeader(event, 'Cache-Control', 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=600')
+
   try {
     const data = (await $fetch<PackagistResponse>(
       'https://packagist.org/packages/laraveljutsu/zap.json',
