@@ -2,15 +2,21 @@ import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
     extends: ['docus'],
-    modules: ["@nuxt/ui", "@nuxt/image", "@nuxt/content", "@nuxt/eslint", "@nuxtjs/sitemap"],
+    modules: [
+        "@nuxt/ui",
+        "@nuxt/image",
+        "@nuxt/content",
+        "@nuxt/eslint",
+        "@nuxtjs/seo" // Includes Sitemap, Robots, Schema.org, OG Image, SEO Meta
+    ],
     
     site: {
         url: 'https://laravel-zap.com',
+        name: 'Laravel Zap',
+        description: 'Flexible schedule management for modern Laravel applications.',
+        defaultLocale: 'en',
     },
     
-    sitemap: {
-        // strictNuxtContentPaths is not needed for @nuxt/content v3
-    },
     // Use layer-relative alias so Nuxt resolves from /app
     css: ['~/assets/css/main.css'],
     
@@ -50,6 +56,9 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
+            htmlAttrs: {
+                lang: 'en'
+            },
             link: [
                 // Favicon
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -58,19 +67,22 @@ export default defineNuxtConfig({
                 // Apple Touch Icon
                 { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
                 // Web App Manifest
-                { rel: 'manifest', href: '/site.webmanifest' }
+                { rel: 'manifest', href: '/site.webmanifest' },
+                // Preconnect to Google Fonts (if used by docus or UI)
+                { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+                { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
             ],
             meta: [
                 // Basic SEO
                 {
                     name: 'description',
                     content:
-                        'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.'
+                        'Laravel Zap provides flexible calendar & scheduling for modern Laravel apps. Manage availabilities, appointments, blocked times and custom schedules effortlessly.'
                 },
                 {
                     name: 'keywords',
                     content:
-                        'Laravel Zap, Calendar Management, Scheduling, PHP, Appointment Booking, Availability, Laravel package'
+                        'Laravel Zap, Laravel calendar, Laravel scheduling, PHP scheduling, Laravel appointments, availability management, bookable time slots, PHP package'
                 },
                 { name: 'author', content: 'Ludovic Guénet' },
 
@@ -80,7 +92,7 @@ export default defineNuxtConfig({
                 {
                     property: 'og:description',
                     content:
-                        'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.'
+                        'Laravel Zap provides flexible calendar & scheduling for modern Laravel apps. Manage availabilities, appointments, blocked times and custom schedules effortlessly.'
                 },
                 { property: 'og:image', content: 'https://laravel-zap.com/social-card.png' },
                 { property: 'og:url', content: 'https://laravel-zap.com' },
@@ -92,16 +104,16 @@ export default defineNuxtConfig({
                 {
                     name: 'twitter:description',
                     content:
-                        'Laravel Zap: flexible calendar & scheduling for Laravel apps. Manage availabilities, appointments, blocked times and custom schedules.'
+                        'Laravel Zap provides flexible calendar & scheduling for modern Laravel apps. Manage availabilities, appointments, blocked times and custom schedules effortlessly.'
                 },
                 { name: 'twitter:image', content: 'https://laravel-zap.com/social-card.png' },
                 { name: 'twitter:creator', content: '@LudovicGuenet' },
                 { name: 'twitter:site', content: '@LudovicGuenet' },
 
                 // Additional SEO
-                { name: 'robots', content: 'index, follow' },
+                { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { name: 'theme-color', content: '#7c3aed' },
+                { name: 'theme-color', content: '#f59e0b' },
 
                 // PWA
                 { name: 'mobile-web-app-capable', content: 'yes' },

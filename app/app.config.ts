@@ -92,8 +92,8 @@ export default defineAppConfig({
     },
   },
   docus: {
-    title: 'Laravel Zap',
-    description: 'Flexible schedule management for modern Laravel applications',
+    title: 'Laravel Zap - Schedule Management for Laravel',
+    description: 'Flexible schedule and calendar management for modern Laravel applications. Manage availabilities, appointments, blocked times and custom schedules effortlessly.',
     image: '/social-card.png',
     socials: {
       twitter: 'LudovicGuenet',
