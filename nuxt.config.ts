@@ -9,17 +9,17 @@ export default defineNuxtConfig({
         "@nuxt/eslint",
         "@nuxtjs/seo" // Includes Sitemap, Robots, Schema.org, OG Image, SEO Meta
     ],
-    
+
     site: {
         url: 'https://laravel-zap.com',
         name: 'Laravel Zap',
         description: 'Flexible schedule management for modern Laravel applications.',
         defaultLocale: 'en',
     },
-    
+
     // Use layer-relative alias so Nuxt resolves from /app
     css: ['~/assets/css/main.css'],
-    
+
     // Production optimizations
     nitro: {
         prerender: {
@@ -29,14 +29,21 @@ export default defineNuxtConfig({
         compressPublicAssets: true,
         minify: true,
     },
-    
+
     // Build optimizations
     experimental: {
         payloadExtraction: true,
+        serverAppConfig: false,
     },
-    
+
     // Performance optimizations
     vite: {
+        optimizeDeps: {
+            include: [
+                '@vue/devtools-core',
+                '@vue/devtools-kit',
+            ]
+        },
         build: {
             cssCodeSplit: true,
             rollupOptions: {
@@ -48,7 +55,7 @@ export default defineNuxtConfig({
             },
         },
     },
-    
+
     // Image optimization
     image: {
         quality: 80,
