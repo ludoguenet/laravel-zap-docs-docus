@@ -3,13 +3,13 @@
     <div class="max-w-6xl mx-auto px-6">
       <header class="text-center max-w-3xl mx-auto">
         <p class="landing-eyebrow">
-          Real-world use cases
+          Proven in real products
         </p>
         <h2 class="mt-4 text-2xl md:text-3xl section-title">
-          From doctors to meeting rooms to shift planning.
+          One booking engine for healthcare, teams, and operations.
         </h2>
         <p class="mt-4 text-sm md:text-base section-subtext">
-          Zap focuses on generating and validating time slots for your models.
+          Use the same calendar foundation across every scheduling use case in your app.
         </p>
       </header>
 
@@ -26,12 +26,12 @@
                   Doctor appointments
                 </p>
                 <h3 class="text-sm font-semibold theme-text">
-                  Clinic &amp; telehealth booking
+                  Fill calendars, not admin queues
                 </h3>
               </div>
             </div>
             <p class="theme-text-muted">
-              Model office hours and blocked days so Zap returns only bookable slots.
+              Keep practitioner calendars accurate and show patients only slots they can actually book.
             </p>
           </article>
         </ShinyCard>
@@ -51,12 +51,12 @@
                   Meeting rooms
                 </p>
                 <h3 class="text-sm font-semibold theme-text">
-                  Rooms, pods &amp; shared spaces
+                  Reliable room utilization
                 </h3>
               </div>
             </div>
             <p class="theme-text-muted">
-              Keep meeting rooms and shared spaces conflict‑free by design.
+              Coordinate shared spaces with confidence and eliminate scheduling collisions.
             </p>
           </article>
         </ShinyCard>
@@ -73,12 +73,12 @@
                   Shift management
                 </p>
                 <h3 class="text-sm font-semibold theme-text">
-                  Teams, call rotations &amp; support
+                  Clear shift coverage
                 </h3>
               </div>
             </div>
             <p class="theme-text-muted">
-              Describe shifts and time off once, then query who is available.
+              Plan rotations and time off once, then instantly check who is available.
             </p>
           </article>
         </ShinyCard>

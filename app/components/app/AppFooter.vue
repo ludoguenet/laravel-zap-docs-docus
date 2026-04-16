@@ -1,7 +1,7 @@
 <template>
-  <footer class="footer-shell py-12 md:py-16">
+  <footer class="footer-shell py-16 md:py-20">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 mb-12 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-14 items-start">
         <div class="space-y-6">
           <div class="flex items-center gap-3">
             <img
@@ -130,7 +130,7 @@
         </div>
       </div>
 
-      <div class="border-t theme-border pt-8">
+      <div class="border-t theme-border pt-10">
         <p class="text-xs theme-text-muted text-center leading-relaxed">
           &copy; Laravel Zap {{ new Date().getFullYear() }}. All rights reserved. Powered by Nuxt.
         </p>

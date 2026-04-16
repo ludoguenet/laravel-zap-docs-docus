@@ -5,25 +5,25 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
 </script>
 
 <template>
-  <section id="install" class="landing-section py-16 md:py-20">
+  <section id="install" class="landing-section">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-3xl">
+      <div class="max-w-3xl space-y-5">
         <p class="landing-eyebrow">
-          Install in seconds
+          Go live faster
         </p>
-        <h2 class="mt-4 text-2xl md:text-3xl section-title">
-          From composer install to bookable slots in three steps.
+        <h2 class="section-title">
+          From install to your first bookable calendar in minutes.
         </h2>
-        <p class="mt-4 text-sm md:text-base section-subtext">
-          Zap is a focused calendar engine for schedules on your existing models.
+        <p class="section-subtext">
+          Add scheduling to your existing Laravel models without rebuilding your product architecture.
         </p>
       </div>
 
       <div
-        class="mt-12 grid gap-8 md:gap-12 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start"
+        class="mt-16 grid gap-10 md:gap-14 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start"
       >
         <!-- Three step mini-guide -->
-        <ol class="space-y-6 text-sm theme-text">
+        <ol class="space-y-8 text-sm theme-text">
           <li class="flex items-start gap-3">
             <span
               class="step-marker text-xs"
@@ -32,7 +32,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
             </span>
             <div>
               <p class="font-semibold theme-text">
-                Publish migrations
+                Set up the schema
               </p>
               <p class="mt-2 text-xs theme-text-muted font-mono">
                 php artisan vendor:publish --tag="zap-migrations"
@@ -47,7 +47,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
             </span>
             <div>
               <p class="font-semibold theme-text">
-                Run the migrations
+                Apply and launch
               </p>
               <p class="mt-2 text-xs theme-text-muted font-mono">
                 php artisan migrate
@@ -62,7 +62,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
             </span>
             <div>
               <p class="font-semibold theme-text">
-                Add the schedulable trait
+                Activate scheduling
               </p>
               <p class="mt-2 text-xs theme-text-muted font-mono">
                 use HasSchedules
