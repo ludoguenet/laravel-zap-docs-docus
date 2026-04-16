@@ -15,6 +15,34 @@ export default defineNuxtConfig({
         name: 'Laravel Zap',
         description: 'Flexible schedule management for modern Laravel applications.',
         defaultLocale: 'en',
+        trailingSlash: false,
+    },
+
+    // Nuxt SEO module configuration
+    robots: {
+        credits: false,
+        disallow: ['/api/**'],
+        sitemap: ['https://laravel-zap.com/sitemap.xml'],
+    },
+    sitemap: {
+        credits: false,
+        autoLastmod: true,
+        discoverImages: true,
+    },
+    schemaOrg: {
+        identity: {
+            type: 'Organization',
+            name: 'Laravel Zap',
+            url: 'https://laravel-zap.com',
+            logo: 'https://laravel-zap.com/logo.png',
+            sameAs: [
+                'https://github.com/ludoguenet/laravel-zap',
+                'https://twitter.com/LudovicGuenet',
+            ],
+        },
+    },
+    ogImage: {
+        enabled: true,
     },
 
     // Use layer-relative alias so Nuxt resolves from /app
@@ -42,6 +70,8 @@ export default defineNuxtConfig({
             include: [
                 '@vue/devtools-core',
                 '@vue/devtools-kit',
+                '@unhead/schema-org/vue',
+                '@vueuse/core',
             ]
         },
         build: {
@@ -80,45 +110,6 @@ export default defineNuxtConfig({
                 { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
             ],
             meta: [
-                // Basic SEO
-                {
-                    name: 'description',
-                    content:
-                        'Laravel Zap provides flexible calendar & scheduling for modern Laravel apps. Manage availabilities, appointments, blocked times and custom schedules effortlessly.'
-                },
-                {
-                    name: 'keywords',
-                    content:
-                        'Laravel Zap, Laravel calendar, Laravel scheduling, PHP scheduling, Laravel appointments, availability management, bookable time slots, PHP package'
-                },
-                { name: 'author', content: 'Ludovic Guénet' },
-
-                // Open Graph / Facebook
-                { property: 'og:type', content: 'website' },
-                { property: 'og:title', content: 'Laravel Zap - Flexible schedule management for Laravel' },
-                {
-                    property: 'og:description',
-                    content:
-                        'Laravel Zap provides flexible calendar & scheduling for modern Laravel apps. Manage availabilities, appointments, blocked times and custom schedules effortlessly.'
-                },
-                { property: 'og:image', content: 'https://laravel-zap.com/social-card.png' },
-                { property: 'og:url', content: 'https://laravel-zap.com' },
-                { property: 'og:site_name', content: 'Laravel Zap' },
-
-                // Twitter Card
-                { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:title', content: 'Laravel Zap - Flexible schedule management for Laravel' },
-                {
-                    name: 'twitter:description',
-                    content:
-                        'Laravel Zap provides flexible calendar & scheduling for modern Laravel apps. Manage availabilities, appointments, blocked times and custom schedules effortlessly.'
-                },
-                { name: 'twitter:image', content: 'https://laravel-zap.com/social-card.png' },
-                { name: 'twitter:creator', content: '@LudovicGuenet' },
-                { name: 'twitter:site', content: '@LudovicGuenet' },
-
-                // Additional SEO
-                { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 { name: 'theme-color', content: '#f59e0b' },
 
