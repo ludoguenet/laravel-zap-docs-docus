@@ -25,7 +25,7 @@ const { data: quickstartSnippet } = await useAsyncData(
             Developer-friendly API
           </p>
           <h2 class="section-title">
-            Ship calendar features, not calendar headaches.
+            Ship calendar <span class="text-gradient">features</span>, not calendar headaches.
           </h2>
           <p class="section-subtext">
             Connect schedules to your models and return accurate availability fast.

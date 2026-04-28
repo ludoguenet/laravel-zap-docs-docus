@@ -1,18 +1,25 @@
 <template>
   <div class="w-full max-w-2xl mx-auto">
     <div
-      class="calendar-wrapper"
+      class="calendar-stack-wrapper"
       aria-label="Calendar preview showing today's events"
     >
+      <!-- Depth cards for visual layering -->
+      <div class="calendar-depth-card calendar-depth-card--2" aria-hidden="true" />
+      <div class="calendar-depth-card calendar-depth-card--1" aria-hidden="true" />
+
       <!-- Calendar card -->
       <div class="calendar-card">
         <!-- Header -->
         <div class="calendar-card__header">
           <div class="flex items-center justify-between">
             <div>
-              <p class="calendar-header__label">
-                Today
-              </p>
+              <div class="flex items-center gap-2">
+                <p class="calendar-header__label">
+                  Today
+                </p>
+                <span class="live-dot" aria-label="Live calendar" />
+              </div>
               <div class="flex items-baseline gap-2 mt-1">
                 <h2 class="calendar-card__date">
                   March 15

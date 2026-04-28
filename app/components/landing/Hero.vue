@@ -16,12 +16,18 @@
 
       <!-- Copy -->
       <div class="flex-1 text-center min-[911px]:text-left space-y-8 w-full min-w-0">
-        <div class="space-y-4">
+        <div class="space-y-5">
+          <div class="flex justify-center min-[911px]:justify-start">
+            <span class="hero-badge">
+              <span class="live-dot" />
+              Open Source · MIT Licensed
+            </span>
+          </div>
           <p class="landing-eyebrow whitespace-normal break-words">
             Power your booking experience
           </p>
           <h1 class="landing-hero__title whitespace-normal">
-            Launch a booking calendar your users trust from day one. ⛹️
+            Launch a booking calendar your users <span class="text-gradient">trust</span> from day one.
           </h1>
         </div>
         <p class="landing-hero__subtitle max-w-xl min-[911px]:max-w-2xl mx-auto min-[911px]:mx-0">

@@ -1,12 +1,12 @@
 <template>
-  <section id="features" class="landing-section landing-section--divider">
+  <section id="features" class="landing-section landing-section--divider landing-section--highlight">
     <div class="max-w-6xl mx-auto px-6">
       <header class="max-w-3xl space-y-5">
         <p class="landing-eyebrow">
           Why teams choose Laravel Zap
         </p>
         <h2 class="section-title">
-          Everything you need to run a premium booking calendar.
+          Everything you need to run a <span class="text-gradient">premium</span> booking calendar.
         </h2>
         <p class="section-subtext">
           Keep your scheduling logic in one reliable engine and deliver a smoother booking experience.
@@ -37,7 +37,7 @@
         <ShinyCard>
           <article class="p-7 md:p-8 flex flex-col gap-5">
             <div class="flex items-center gap-3">
-              <span class="icon-chip">
+              <span class="icon-chip icon-chip--blue">
                 <UIcon name="i-heroicons-adjustments-horizontal" class="w-5 h-5" />
               </span>
               <h3 class="text-sm font-semibold flex items-center gap-2 theme-text">
@@ -54,7 +54,7 @@
         <ShinyCard>
           <article class="p-7 md:p-8 flex flex-col gap-5">
             <div class="flex items-center gap-3">
-              <span class="icon-chip">
+              <span class="icon-chip icon-chip--green">
                 <UIcon name="i-heroicons-clock" class="w-5 h-5" />
               </span>
               <h3 class="text-sm font-semibold flex items-center gap-2 theme-text">

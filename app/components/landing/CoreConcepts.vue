@@ -12,7 +12,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
           Go live faster
         </p>
         <h2 class="section-title">
-          From install to your first bookable calendar in minutes.
+          From install to your first bookable calendar <span class="text-gradient">in minutes.</span>
         </h2>
         <p class="section-subtext">
           Add scheduling to your existing Laravel models without rebuilding your product architecture.
@@ -23,7 +23,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
         class="mt-16 grid gap-10 md:gap-14 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start"
       >
         <!-- Three step mini-guide -->
-        <ol class="space-y-8 text-sm theme-text">
+        <ol class="step-list space-y-8 text-sm theme-text">
           <li class="flex items-start gap-3">
             <span
               class="step-marker text-xs"

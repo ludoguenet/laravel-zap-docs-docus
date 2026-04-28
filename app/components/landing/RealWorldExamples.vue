@@ -6,10 +6,10 @@
           Proven in real products
         </p>
         <h2 class="mt-4 text-2xl md:text-3xl section-title">
-          One booking engine for healthcare, teams, and operations.
+          One booking engine for <span class="text-gradient">every</span> scheduling use case.
         </h2>
-        <p class="mt-4 text-sm md:text-base section-subtext">
-          Use the same calendar foundation across every scheduling use case in your app.
+        <p class="mt-4 text-sm md:text-base section-subtext mx-auto">
+          Use the same calendar foundation across healthcare, teams, and operations.
         </p>
       </header>
 
@@ -18,7 +18,7 @@
         <ShinyCard>
           <article class="p-6 flex flex-col gap-4">
             <div class="flex items-center gap-3">
-              <span class="icon-chip">
+              <span class="icon-chip" style="background-color: color-mix(in srgb, #ef4444 8%, transparent); border-color: color-mix(in srgb, #ef4444 22%, transparent); color: #ef4444;">
                 <UIcon name="i-heroicons-heart" class="w-5 h-5" />
               </span>
               <div>
@@ -40,7 +40,7 @@
         <ShinyCard>
           <article class="p-6 flex flex-col gap-4">
             <div class="flex items-center gap-3">
-              <span class="icon-chip">
+              <span class="icon-chip icon-chip--blue">
                 <UIcon
                   name="i-heroicons-building-office-2"
                   class="w-5 h-5"
@@ -65,7 +65,7 @@
         <ShinyCard>
           <article class="p-6 flex flex-col gap-4">
             <div class="flex items-center gap-3">
-              <span class="icon-chip">
+              <span class="icon-chip icon-chip--green">
                 <UIcon name="i-heroicons-users" class="w-5 h-5" />
               </span>
               <div>
