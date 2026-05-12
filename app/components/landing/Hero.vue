@@ -17,12 +17,6 @@
       <!-- Copy -->
       <div class="flex-1 text-center min-[911px]:text-left space-y-8 w-full min-w-0">
         <div class="space-y-5">
-          <div class="flex justify-center min-[911px]:justify-start">
-            <span class="hero-badge">
-              <span class="live-dot" />
-              Open Source · MIT Licensed
-            </span>
-          </div>
           <p class="landing-eyebrow whitespace-normal break-words">
             Power your booking experience
           </p>
