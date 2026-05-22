@@ -9,6 +9,9 @@ seo:
   description: 'A powerful Laravel package to manage availabilities, appointments, and custom schedules without the hassle.'
 ---
 
+:::LandingLaravelJutsuBanner
+:::
+
 :::LandingHero
 :::
 
