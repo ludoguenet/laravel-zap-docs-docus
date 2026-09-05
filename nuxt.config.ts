@@ -78,8 +78,10 @@ export default defineNuxtConfig({
             cssCodeSplit: true,
             rollupOptions: {
                 output: {
-                    manualChunks: {
-                        'vue-vendor': ['vue'],
+                    manualChunks(id) {
+                        if (id.includes('node_modules/vue/')) {
+                            return 'vue-vendor'
+                        }
                     },
                 },
             },
