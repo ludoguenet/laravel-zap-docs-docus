@@ -58,7 +58,7 @@ const { formattedDownloads, isLoading } = useZapDownloads()
           v-if="!isLoading && formattedDownloads"
           class="header-downloads hidden lg:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border theme-border bg-white/70 dark:bg-white/5 backdrop-blur-sm text-xs font-medium theme-text-muted"
         >
-          <UIcon name="i-heroicons-arrow-down-tray" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+          <UIcon name="i-heroicons-arrow-down-tray" class="w-3.5 h-3.5 text-primary" />
           <span>{{ formattedDownloads }}</span>
         </div>
 

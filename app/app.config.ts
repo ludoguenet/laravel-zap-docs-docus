@@ -1,8 +1,9 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'amber',
-      neutral: 'zinc',
+      primary: 'orange',
+      secondary: 'red',
+      neutral: 'stone',
     },
     page: {
       aside: {

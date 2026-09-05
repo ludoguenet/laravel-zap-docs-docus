@@ -106,14 +106,11 @@ export default defineNuxtConfig({
                 // Apple Touch Icon
                 { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
                 // Web App Manifest
-                { rel: 'manifest', href: '/site.webmanifest' },
-                // Preconnect to Google Fonts (if used by docus or UI)
-                { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-                { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+                { rel: 'manifest', href: '/site.webmanifest' }
             ],
             meta: [
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { name: 'theme-color', content: '#f59e0b' },
+                { name: 'theme-color', content: '#f97316' },
 
                 // PWA
                 { name: 'mobile-web-app-capable', content: 'yes' },
@@ -127,6 +124,12 @@ export default defineNuxtConfig({
         preference: 'system',
         fallback: 'light',
         classSuffix: ''
+    },
+    fonts: {
+        families: [
+            { name: 'Inter', provider: 'google', weights: [400, 500, 600, 700] },
+            { name: 'JetBrains Mono', provider: 'google', weights: [400, 500, 600] },
+        ],
     },
     content: {
         build: {

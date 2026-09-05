@@ -10,7 +10,7 @@
               alt="Laravel Zap logo"
             >
             <div>
-              <p class="text-sm font-semibold text-amber-600">Laravel Zap</p>
+              <p class="text-sm font-semibold text-primary">Laravel Zap</p>
               <p class="text-sm theme-text-muted">Scheduling made calm and consistent.</p>
             </div>
           </div>
@@ -18,7 +18,7 @@
             Build predictable schedules with minimal fuss. Zap stays out of your way while keeping your calendar logic reliable.
           </p>
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border theme-border bg-white/80 dark:bg-white/5 backdrop-blur-sm text-xs font-medium theme-text-muted">
-            <span class="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
+            <span class="h-2 w-2 rounded-full bg-primary animate-pulse" />
             <span>Production-ready & actively maintained</span>
           </div>
         </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 dark:from-amber-600 dark:via-orange-600 dark:to-amber-700">
+  <div class="w-full bg-gradient-to-r from-primary-600 via-primary-500 to-secondary-500 dark:from-primary-700 dark:via-primary-600 dark:to-secondary-600">
     <a
       href="https://laraveljutsu.com"
       target="_blank"

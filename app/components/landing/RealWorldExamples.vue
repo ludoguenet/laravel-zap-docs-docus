@@ -1,88 +1,80 @@
 <template>
-  <section id="examples" class="landing-section landing-section--divider py-16 md:py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <header class="text-center max-w-3xl mx-auto">
-        <p class="landing-eyebrow">
-          Proven in real products
-        </p>
-        <h2 class="mt-4 text-2xl md:text-3xl section-title">
-          One booking engine for <span class="text-gradient">every</span> scheduling use case.
-        </h2>
-        <p class="mt-4 text-sm md:text-base section-subtext mx-auto">
-          Use the same calendar foundation across healthcare, teams, and operations.
-        </p>
-      </header>
+  <UPageSection
+    id="examples"
+    headline="Proven in real products"
+    class="landing-section landing-section--divider py-16 md:py-20"
+    :ui="{
+      container: 'max-w-6xl py-0 sm:py-0 lg:py-0',
+      header: 'max-w-3xl mx-auto',
+    }"
+  >
+    <template #title>
+      One booking engine for <span class="text-gradient">every</span> scheduling use case.
+    </template>
 
-      <div class="mt-12 grid gap-6 md:gap-8 md:grid-cols-3 text-sm">
-        <!-- Doctor appointments -->
-        <ShinyCard>
-          <article class="p-6 flex flex-col gap-4">
-            <div class="flex items-center gap-3">
-              <span class="icon-chip" style="background-color: color-mix(in srgb, #ef4444 8%, transparent); border-color: color-mix(in srgb, #ef4444 22%, transparent); color: #ef4444;">
-                <UIcon name="i-heroicons-heart" class="w-5 h-5" />
-              </span>
-              <div>
-                <p class="label-secondary">
-                  Doctor appointments
-                </p>
-                <h3 class="text-sm font-semibold theme-text">
-                  Fill calendars, not admin queues
-                </h3>
-              </div>
-            </div>
-            <p class="theme-text-muted">
-              Keep practitioner calendars accurate and show patients only slots they can actually book.
-            </p>
-          </article>
-        </ShinyCard>
+    <template #description>
+      Use the same calendar foundation across healthcare, teams, and operations.
+    </template>
 
-        <!-- Meeting rooms -->
-        <ShinyCard>
-          <article class="p-6 flex flex-col gap-4">
-            <div class="flex items-center gap-3">
-              <span class="icon-chip icon-chip--blue">
-                <UIcon
-                  name="i-heroicons-building-office-2"
-                  class="w-5 h-5"
-                />
-              </span>
-              <div>
-                <p class="label-secondary">
-                  Meeting rooms
-                </p>
-                <h3 class="text-sm font-semibold theme-text">
-                  Reliable room utilization
-                </h3>
-              </div>
-            </div>
-            <p class="theme-text-muted">
-              Coordinate shared spaces with confidence and eliminate scheduling collisions.
+    <template #body>
+      <UPageGrid>
+        <UPageCard variant="subtle" spotlight spotlight-color="secondary">
+          <template #header>
+            <p class="label-secondary">
+              Doctor appointments
             </p>
-          </article>
-        </ShinyCard>
+          </template>
+          <template #leading>
+            <span class="icon-chip" style="background-color: color-mix(in srgb, #ef4444 8%, transparent); border-color: color-mix(in srgb, #ef4444 22%, transparent); color: #ef4444;">
+              <UIcon name="i-heroicons-heart" class="w-5 h-5" />
+            </span>
+          </template>
+          <template #title>
+            Fill calendars, not admin queues
+          </template>
+          <template #description>
+            Keep practitioner calendars accurate and show patients only slots they can actually book.
+          </template>
+        </UPageCard>
 
-        <!-- Shift management -->
-        <ShinyCard>
-          <article class="p-6 flex flex-col gap-4">
-            <div class="flex items-center gap-3">
-              <span class="icon-chip icon-chip--green">
-                <UIcon name="i-heroicons-users" class="w-5 h-5" />
-              </span>
-              <div>
-                <p class="label-secondary">
-                  Shift management
-                </p>
-                <h3 class="text-sm font-semibold theme-text">
-                  Clear shift coverage
-                </h3>
-              </div>
-            </div>
-            <p class="theme-text-muted">
-              Plan rotations and time off once, then instantly check who is available.
+        <UPageCard variant="subtle" spotlight spotlight-color="secondary">
+          <template #header>
+            <p class="label-secondary">
+              Meeting rooms
             </p>
-          </article>
-        </ShinyCard>
-      </div>
-    </div>
-  </section>
+          </template>
+          <template #leading>
+            <span class="icon-chip icon-chip--blue">
+              <UIcon name="i-heroicons-building-office-2" class="w-5 h-5" />
+            </span>
+          </template>
+          <template #title>
+            Reliable room utilization
+          </template>
+          <template #description>
+            Coordinate shared spaces with confidence and eliminate scheduling collisions.
+          </template>
+        </UPageCard>
+
+        <UPageCard variant="subtle" spotlight spotlight-color="secondary">
+          <template #header>
+            <p class="label-secondary">
+              Shift management
+            </p>
+          </template>
+          <template #leading>
+            <span class="icon-chip icon-chip--green">
+              <UIcon name="i-heroicons-users" class="w-5 h-5" />
+            </span>
+          </template>
+          <template #title>
+            Clear shift coverage
+          </template>
+          <template #description>
+            Plan rotations and time off once, then instantly check who is available.
+          </template>
+        </UPageCard>
+      </UPageGrid>
+    </template>
+  </UPageSection>
 </template>

@@ -5,31 +5,32 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
 </script>
 
 <template>
-  <section id="install" class="landing-section">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-3xl space-y-5">
-        <p class="landing-eyebrow">
-          Go live faster
-        </p>
-        <h2 class="section-title">
-          From install to your first bookable calendar <span class="text-gradient">in minutes.</span>
-        </h2>
-        <p class="section-subtext">
-          Add scheduling to your existing Laravel models without rebuilding your product architecture.
-        </p>
-      </div>
+  <UPageSection
+    id="install"
+    headline="Go live faster"
+    class="landing-section"
+    :ui="{
+      container: 'max-w-6xl py-0 sm:py-0 lg:py-0',
+      header: 'max-w-3xl',
+      headline: 'justify-start',
+      title: 'text-left',
+      description: 'text-left',
+    }"
+  >
+    <template #title>
+      From install to your first bookable calendar <span class="text-gradient">in minutes.</span>
+    </template>
 
-      <div
-        class="mt-16 grid gap-10 md:gap-14 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start"
-      >
+    <template #description>
+      Add scheduling to your existing Laravel models without rebuilding your product architecture.
+    </template>
+
+    <template #body>
+      <div class="grid gap-10 md:gap-14 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-start">
         <!-- Three step mini-guide -->
         <ol class="step-list space-y-8 text-sm theme-text">
           <li class="flex items-start gap-3">
-            <span
-              class="step-marker text-xs"
-            >
-              1
-            </span>
+            <UBadge label="1" size="lg" variant="solid" color="primary" class="rounded-full size-8 shrink-0 justify-center p-0" />
             <div>
               <p class="font-semibold theme-text">
                 Set up the schema
@@ -40,11 +41,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
             </div>
           </li>
           <li class="flex items-start gap-3">
-            <span
-              class="step-marker text-xs"
-            >
-              2
-            </span>
+            <UBadge label="2" size="lg" variant="solid" color="primary" class="rounded-full size-8 shrink-0 justify-center p-0" />
             <div>
               <p class="font-semibold theme-text">
                 Apply and launch
@@ -55,11 +52,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
             </div>
           </li>
           <li class="flex items-start gap-3">
-            <span
-              class="step-marker text-xs"
-            >
-              3
-            </span>
+            <UBadge label="3" size="lg" variant="solid" color="primary" class="rounded-full size-8 shrink-0 justify-center p-0" />
             <div>
               <p class="font-semibold theme-text">
                 Activate scheduling
@@ -79,6 +72,6 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
           />
         </div>
       </div>
-    </div>
-  </section>
+    </template>
+  </UPageSection>
 </template>

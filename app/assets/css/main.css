@@ -1,42 +1,42 @@
-/* Minimal, shadcn-inspired theme — zinc neutrals + warm amber accent */
+/* Minimal, shadcn-inspired theme — stone neutrals + warm orange/red accent.
+   Color tokens are derived from Nuxt UI's --ui-* CSS variables (see app/app.config.ts
+   ui.colors). Do not hardcode hex colors here for anything Nuxt UI already exposes. */
 :root {
   scroll-behavior: smooth;
   color-scheme: light;
 
-  /* Neutral stack — slight warmth in lights */
-  --zinc-50: #fafaf9;
-  --zinc-100: #f5f5f4;
-  --zinc-200: #e7e5e4;
-  --zinc-300: #d6d3d1;
-  --zinc-400: #a8a29e;
-  --zinc-500: #78716c;
-  --zinc-600: #57534e;
-  --zinc-700: #44403c;
-  --zinc-800: #292524;
-  --zinc-900: #1c1917;
-  --zinc-950: #0c0a09;
+  /* Font stacks — actual webfont loading is handled by @nuxt/fonts (see nuxt.config.ts) */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas,
+    'Liberation Mono', monospace;
 
-  /* Accent */
-  --amber-400: #fbbf24;
-  --amber-500: #f59e0b;
-  --amber-600: #d97706;
+  /* Accent aliases — thin wrappers over Nuxt UI's generated vars, single source of truth
+     is app.config.ts ui.colors. These auto-switch shade between light/dark already. */
+  --accent: var(--ui-primary);
+  --accent-400: var(--ui-color-primary-400);
+  --accent-500: var(--ui-color-primary-500);
+  --accent-600: var(--ui-color-primary-600);
+  --accent-secondary: var(--ui-secondary);
+  --accent-secondary-400: var(--ui-color-secondary-400);
+  --accent-secondary-500: var(--ui-color-secondary-500);
 
-  /* Surface tokens — clear hierarchy */
-  --color-bg: #fefefe;
-  --color-surface: #fafaf9;
+  /* Surface tokens — clear hierarchy. Card is deliberately brighter than the page
+     background (inverted from Nuxt UI's own bg/elevated convention), so these stay
+     hand-authored rather than aliased to --ui-bg/--ui-bg-elevated. */
+  --color-bg: #fafaf9;
+  --color-surface: #f5f5f4;
   --color-surface-elevated: #ffffff;
   --color-card: #ffffff;
-  --color-border: #e7e5e4;
-  --color-border-strong: #d6d3d1;
-  --color-border-subtle: #f5f5f4;
-  --color-text: #0c0a09;
-  --color-text-muted: #57534e;
-  --color-text-faint: #a8a29e;
-  --code-bg: #0f172a;
+  --color-border: var(--ui-border);
+  --color-border-strong: var(--ui-border-accented);
+  --color-border-subtle: var(--ui-border-muted);
+  --color-text: var(--ui-text-highlighted);
+  --color-text-muted: var(--ui-text-muted);
+  --color-text-faint: var(--ui-text-dimmed);
 
   /* Accent surface */
-  --color-accent-surface: color-mix(in srgb, var(--amber-500) 8%, transparent);
-  --color-accent-border: color-mix(in srgb, var(--amber-500) 22%, transparent);
+  --color-accent-surface: color-mix(in srgb, var(--accent-500) 8%, transparent);
+  --color-accent-border: color-mix(in srgb, var(--accent-500) 22%, transparent);
 
   /* Shadow tokens — softer, more minimal */
   --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.02);
@@ -46,7 +46,7 @@
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.06), 0 8px 10px -6px rgb(0 0 0 / 0.04);
 
   /* Ring (focus / highlight) */
-  --ring-accent: 0 0 0 2px color-mix(in srgb, var(--amber-500) 28%, transparent);
+  --ring-accent: 0 0 0 2px color-mix(in srgb, var(--accent-500) 28%, transparent);
 
   /* Transition */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -70,21 +70,13 @@
 
 html.dark {
   color-scheme: dark;
-  /* Slightly warmer dark base for less harsh contrast */
   --color-bg: #0c0a09;
-  --color-surface: #141210;
-  --color-surface-elevated: #1c1917;
-  --color-card: #1a1714;
-  --color-border: #292524;
-  --color-border-strong: #44403c;
-  --color-border-subtle: #1c1917;
-  --color-text: #fafaf9;
-  --color-text-muted: #a8a29e;
-  --color-text-faint: #57534e;
-  --code-bg: #0b1220;
+  --color-surface: #1c1917;
+  --color-surface-elevated: #292524;
+  --color-card: #292524;
 
-  --color-accent-surface: color-mix(in srgb, var(--amber-500) 6%, transparent);
-  --color-accent-border: color-mix(in srgb, var(--amber-500) 14%, transparent);
+  --color-accent-surface: color-mix(in srgb, var(--accent-500) 6%, transparent);
+  --color-accent-border: color-mix(in srgb, var(--accent-500) 14%, transparent);
 
   /* Dark shadows — subtle lift, no harsh blacks */
   --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.15);
@@ -105,8 +97,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
+  font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
   margin: 0;
@@ -123,7 +114,7 @@ body {
 
 /* Focus visible for accessibility — minimal ring */
 :focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--amber-500) 40%, transparent);
+  outline: 2px solid color-mix(in srgb, var(--accent-500) 40%, transparent);
   outline-offset: 2px;
 }
 
@@ -169,43 +160,8 @@ html.dark .nui-header {
   outline-offset: 1px;
 }
 
-.header-docs-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  color: #1f1f1f;
-  background-color: var(--amber-500);
-  border: 1px solid color-mix(in srgb, var(--amber-500) 32%, transparent);
-  border-radius: 0.625rem;
-  box-shadow: 0 8px 20px color-mix(in srgb, var(--amber-500) 30%, transparent);
-  transition: all var(--duration-normal) var(--ease-out);
-  cursor: pointer;
-}
-
-.header-docs-button:hover {
-  background-color: color-mix(in srgb, var(--amber-500) 88%, white);
-  color: #0f172a;
-  border-color: color-mix(in srgb, var(--amber-500) 45%, transparent);
-  box-shadow: 0 10px 24px color-mix(in srgb, var(--amber-500) 38%, transparent);
-  transform: translateY(-1px);
-}
-
-.header-docs-button:active {
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--amber-500) 30%, transparent);
-  transform: translateY(0);
-}
-
-html.dark .header-docs-button {
-  color: #0b1220;
-}
-
 .header-downloads {
-  color: var(--amber-600);
+  color: var(--accent-600);
   transition: all var(--duration-fast) var(--ease-out);
 }
 
@@ -241,8 +197,7 @@ html.dark .header-docs-button {
 }
 
 .inline-callout {
-  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas,
-    'Liberation Mono', monospace;
+  font-family: var(--font-mono);
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
@@ -286,12 +241,12 @@ html.dark .header-docs-button {
   letter-spacing: var(--type-label-tracking);
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--amber-600);
+  color: var(--accent-600);
   line-height: 1.5;
 }
 
 html.dark .landing-eyebrow {
-  color: var(--amber-400);
+  color: var(--accent-400);
 }
 
 .section-title {
@@ -325,30 +280,14 @@ html.dark .landing-eyebrow {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 60% at 25% 30%, color-mix(in srgb, var(--amber-500) 12%, transparent), transparent),
-    radial-gradient(ellipse 60% 50% at 75% 70%, color-mix(in srgb, var(--zinc-300) 8%, transparent), transparent);
+    radial-gradient(ellipse 80% 60% at 25% 30%, color-mix(in srgb, var(--accent-500) 12%, transparent), transparent),
+    radial-gradient(ellipse 60% 50% at 75% 70%, color-mix(in srgb, var(--ui-color-neutral-300) 8%, transparent), transparent);
 }
 
 html.dark .hero-gradient-bg {
   background:
-    radial-gradient(ellipse 80% 60% at 25% 30%, color-mix(in srgb, var(--amber-500) 8%, transparent), transparent),
-    radial-gradient(ellipse 60% 50% at 75% 70%, color-mix(in srgb, var(--zinc-600) 6%, transparent), transparent);
-}
-
-.hero-dot-grid {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.35;
-  background-image: radial-gradient(circle, var(--color-border-strong) 1px, transparent 1px);
-  background-size: 24px 24px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent);
-}
-
-html.dark .hero-dot-grid {
-  opacity: 0.18;
+    radial-gradient(ellipse 80% 60% at 25% 30%, color-mix(in srgb, var(--accent-500) 8%, transparent), transparent),
+    radial-gradient(ellipse 60% 50% at 75% 70%, color-mix(in srgb, var(--ui-color-neutral-600) 6%, transparent), transparent);
 }
 
 .hero-gradient-orb {
@@ -365,7 +304,7 @@ html.dark .hero-dot-grid {
   height: 500px;
   top: -15%;
   left: -8%;
-  background: color-mix(in srgb, var(--amber-400) 12%, transparent);
+  background: color-mix(in srgb, var(--accent-400) 12%, transparent);
   animation: orb-drift-1 18s ease-in-out infinite;
 }
 
@@ -374,7 +313,7 @@ html.dark .hero-dot-grid {
   height: 380px;
   bottom: -10%;
   right: -5%;
-  background: color-mix(in srgb, var(--amber-600) 8%, transparent);
+  background: color-mix(in srgb, var(--accent-secondary-500) 8%, transparent);
   animation: orb-drift-2 22s ease-in-out infinite;
 }
 
@@ -383,18 +322,18 @@ html.dark .hero-dot-grid {
   height: 280px;
   top: 40%;
   right: 25%;
-  background: color-mix(in srgb, var(--zinc-400) 6%, transparent);
+  background: color-mix(in srgb, var(--ui-color-neutral-400) 6%, transparent);
   animation: orb-drift-3 15s ease-in-out infinite;
 }
 
 html.dark .hero-gradient-orb--1 {
-  background: color-mix(in srgb, var(--amber-400) 7%, transparent);
+  background: color-mix(in srgb, var(--accent-400) 7%, transparent);
 }
 html.dark .hero-gradient-orb--2 {
-  background: color-mix(in srgb, var(--amber-600) 5%, transparent);
+  background: color-mix(in srgb, var(--accent-secondary-500) 5%, transparent);
 }
 html.dark .hero-gradient-orb--3 {
-  background: color-mix(in srgb, var(--zinc-600) 4%, transparent);
+  background: color-mix(in srgb, var(--ui-color-neutral-600) 4%, transparent);
 }
 
 @keyframes orb-drift-1 {
@@ -454,36 +393,7 @@ html.dark .hero-gradient-orb--3 {
   color: var(--color-text);
 }
 
-.accent-dot {
-  display: inline-flex;
-  height: 0.45rem;
-  width: 0.45rem;
-  border-radius: 999px;
-  background: var(--amber-500);
-  box-shadow: 0 0 0 3px var(--color-accent-surface);
-  flex-shrink: 0;
-}
-
 /* ─── Cards ─── */
-.feature-card,
-.example-card {
-  background-color: var(--color-card);
-  border: 1px solid color-mix(in srgb, var(--color-border) 48%, transparent);
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgb(15 23 42 / 0.02), 0 10px 28px rgb(15 23 42 / 0.05);
-  color: var(--color-text);
-  transition: border-color var(--duration-normal) var(--ease-out),
-              box-shadow var(--duration-normal) var(--ease-out),
-              transform var(--duration-normal) var(--ease-out);
-}
-
-.feature-card:hover,
-.example-card:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--color-border-strong) 65%, transparent);
-  box-shadow: 0 2px 6px rgb(15 23 42 / 0.03), 0 16px 34px rgb(15 23 42 / 0.08);
-}
-
 .icon-chip {
   display: flex;
   height: 2.25rem;
@@ -493,13 +403,13 @@ html.dark .hero-gradient-orb--3 {
   border-radius: 0.5rem;
   background-color: var(--color-accent-surface);
   border: 1px solid var(--color-accent-border);
-  color: var(--amber-600);
+  color: var(--accent-600);
   transition: all var(--duration-fast) var(--ease-out);
   flex-shrink: 0;
 }
 
 html.dark .icon-chip {
-  color: var(--amber-400);
+  color: var(--accent-400);
 }
 
 .accent-bar {
@@ -507,7 +417,7 @@ html.dark .icon-chip {
   width: 1.75rem;
   border-radius: 999px;
   display: inline-block;
-  background: linear-gradient(90deg, var(--amber-500), color-mix(in srgb, var(--amber-400) 40%, transparent));
+  background: linear-gradient(90deg, var(--accent-500), color-mix(in srgb, var(--accent-400) 40%, transparent));
   flex-shrink: 0;
 }
 
@@ -518,10 +428,10 @@ html.dark .icon-chip {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-  background: var(--amber-500);
-  color: #09090b;
+  background: var(--accent-500);
+  color: #ffffff;
   font-weight: 700;
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--amber-500) 25%, transparent);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--accent-500) 25%, transparent);
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -599,11 +509,11 @@ html.dark .calendar-card {
 
 .calendar-icon-wrapper:hover {
   background-color: var(--color-accent-surface);
-  color: var(--amber-600);
+  color: var(--accent-600);
 }
 
 html.dark .calendar-icon-wrapper:hover {
-  color: var(--amber-400);
+  color: var(--accent-400);
 }
 
 .calendar-events {
@@ -660,7 +570,7 @@ html.dark .calendar-icon-wrapper:hover {
   gap: 0.75rem;
   padding-left: 0.75rem;
   min-height: 2.5rem;
-  border-left: 2px solid var(--amber-500);
+  border-left: 2px solid var(--accent-500);
 }
 
 .calendar-event__body--secondary {
@@ -717,7 +627,7 @@ html.dark .calendar-icon-wrapper:hover {
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 0.4rem;
-  background-color: var(--amber-500);
+  background-color: var(--accent-500);
 }
 
 .calendar-event__indicator--secondary {
@@ -742,7 +652,7 @@ html.dark .calendar-icon-wrapper:hover {
   gap: 0.35rem;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--amber-600);
+  color: var(--accent-600);
   background: none;
   border: none;
   padding: 0;
@@ -752,11 +662,11 @@ html.dark .calendar-icon-wrapper:hover {
 }
 
 html.dark .calendar-footer__link {
-  color: var(--amber-400);
+  color: var(--accent-400);
 }
 
 .calendar-footer__link:hover {
-  color: var(--amber-500);
+  color: var(--accent-500);
 }
 
 /* ─── Footer ─── */
@@ -785,24 +695,24 @@ html.dark .calendar-footer__link {
   gap: 0.5rem;
   padding: 0.72rem 1.25rem;
   border-radius: 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--amber-500) 38%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-500) 38%, transparent);
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--amber-500) 92%, white) 0%,
-    var(--amber-500) 100%
+    color-mix(in srgb, var(--accent-500) 92%, white) 0%,
+    var(--accent-500) 100%
   );
-  color: #111827;
+  color: #ffffff;
   font-size: 0.96rem;
   font-weight: 620;
   letter-spacing: -0.012em;
   text-decoration: none;
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--amber-500) 28%, transparent);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent-500) 28%, transparent);
   transition: all var(--duration-normal) var(--ease-out);
 }
 
 .editorial-button-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 28px color-mix(in srgb, var(--amber-500) 34%, transparent);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--accent-500) 34%, transparent);
 }
 
 .editorial-button-secondary {
@@ -835,85 +745,29 @@ html.dark .calendar-footer__link {
 }
 
 .footer-link:hover {
-  color: var(--amber-600);
+  color: var(--accent-600);
 }
 
 html.dark .footer-link:hover {
-  color: var(--amber-400);
+  color: var(--accent-400);
 }
 
 .footer-link:focus-visible {
   outline-offset: 2px;
 }
 
-/* ─── Section dot grid background ─── */
-.section-dot-grid {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.25;
-  background-image: radial-gradient(circle, var(--color-border) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: linear-gradient(180deg, transparent, black 20%, black 80%, transparent);
-  -webkit-mask-image: linear-gradient(180deg, transparent, black 20%, black 80%, transparent);
-}
-
-html.dark .section-dot-grid {
-  opacity: 0.12;
-}
-
-/* ─── Glow line (decorative top border on sections) ─── */
-.glow-line {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(40%, 400px);
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--amber-500), transparent);
-  opacity: 0.35;
-  pointer-events: none;
-}
-
-html.dark .glow-line {
-  opacity: 0.22;
-}
-
 /* ─── Gradient text ─── */
 .text-gradient {
-  background: linear-gradient(135deg, var(--amber-500) 0%, #f97316 55%, var(--amber-600) 100%);
+  background: linear-gradient(135deg, var(--accent-500) 0%, var(--accent-secondary-500) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 html.dark .text-gradient {
-  background: linear-gradient(135deg, var(--amber-400) 0%, #fb923c 55%, var(--amber-500) 100%);
+  background: linear-gradient(135deg, var(--accent-400) 0%, var(--accent-secondary-400) 100%);
   -webkit-background-clip: text;
   background-clip: text;
-}
-
-/* ─── Hero badge ─── */
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.28rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--color-accent-border);
-  background: var(--color-accent-surface);
-  font-size: 0.73rem;
-  font-weight: 600;
-  color: var(--amber-600);
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
-  transition: border-color var(--duration-fast) var(--ease-out),
-              background-color var(--duration-fast) var(--ease-out);
-}
-
-html.dark .hero-badge {
-  color: var(--amber-400);
 }
 
 /* ─── Live pulse dot ─── */
@@ -992,18 +846,6 @@ html.dark .calendar-depth-card--2 {
   z-index: 0;
 }
 
-/* ─── Features highlight card ─── */
-.feature-number {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--color-text-faint);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: auto;
-  margin-left: auto;
-  line-height: 1;
-}
-
 /* ─── Use-case badge color variants ─── */
 .icon-chip--blue {
   background-color: color-mix(in srgb, #3b82f6 8%, transparent);
@@ -1033,7 +875,7 @@ html.dark .icon-chip--green {
 .landing-section--highlight {
   background: radial-gradient(
     ellipse 80% 50% at 50% 0%,
-    color-mix(in srgb, var(--amber-500) 4%, var(--color-bg)),
+    color-mix(in srgb, var(--accent-500) 4%, var(--color-bg)),
     var(--color-bg) 60%
   );
 }
@@ -1041,7 +883,7 @@ html.dark .icon-chip--green {
 html.dark .landing-section--highlight {
   background: radial-gradient(
     ellipse 80% 50% at 50% 0%,
-    color-mix(in srgb, var(--amber-500) 3%, var(--color-bg)),
+    color-mix(in srgb, var(--accent-500) 3%, var(--color-bg)),
     var(--color-bg) 60%
   );
 }
