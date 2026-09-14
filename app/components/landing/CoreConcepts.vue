@@ -30,7 +30,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
         <!-- Three step mini-guide -->
         <ol class="step-list space-y-8 text-sm theme-text">
           <li class="flex items-start gap-3">
-            <UBadge label="1" size="lg" variant="solid" color="primary" class="rounded-full size-8 shrink-0 justify-center p-0" />
+            <UBadge label="1" size="lg" variant="solid" color="primary" class="relative z-10 rounded-full size-8 shrink-0 justify-center p-0" />
             <div>
               <p class="font-semibold theme-text">
                 Set up the schema
@@ -41,7 +41,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
             </div>
           </li>
           <li class="flex items-start gap-3">
-            <UBadge label="2" size="lg" variant="solid" color="primary" class="rounded-full size-8 shrink-0 justify-center p-0" />
+            <UBadge label="2" size="lg" variant="solid" color="primary" class="relative z-10 rounded-full size-8 shrink-0 justify-center p-0" />
             <div>
               <p class="font-semibold theme-text">
                 Apply and launch
@@ -52,7 +52,7 @@ const { data: installSnippet } = await useAsyncData('landing-install-snippet', (
             </div>
           </li>
           <li class="flex items-start gap-3">
-            <UBadge label="3" size="lg" variant="solid" color="primary" class="rounded-full size-8 shrink-0 justify-center p-0" />
+            <UBadge label="3" size="lg" variant="solid" color="primary" class="relative z-10 rounded-full size-8 shrink-0 justify-center p-0" />
             <div>
               <p class="font-semibold theme-text">
                 Activate scheduling
